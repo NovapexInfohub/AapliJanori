@@ -32,23 +32,23 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const dummyImage = "https://via.placeholder.com/300x300/000000/FFFFFF?text=Photo";
+  // Updated to use a smaller profile silhouette placeholder (150x150 pixels)
+  const dummyImage = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
 
-const panchayatMembers = [
-  { id: 1, name: 'सौ. लता धोंडीराम घुगे', position: 'सरपंच', category: 'ना.मा.प्र.', image: dummyImage },
-  { id: 2, name: 'श्री. नवकिशोर गणेश गवडे', position: 'उपसरपंच', category: 'सर्वसाधारण', image: dummyImage },
-  { id: 3, name: 'श्री. रमेश जयराम डोंगे', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
-  { id: 4, name: 'श्री. शंकर रामदास सोनक्के', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
-  { id: 5, name: 'सौ. दिशा गजानन भजन', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-  { id: 6, name: 'सौ. सुरेखा सुधाकर घुगे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-  { id: 7, name: 'सौ. दुर्गा प्रभाकर बोरसे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-  { id: 8, name: 'सौ. अर्चना मंगेश टाले', position: 'सदस्या', category: 'ना.मा.प्र.', image: dummyImage },
-  { id: 9, name: 'शेख रेहाना शेख मोहम्मद', position: 'सदस्या', category: 'अ.मु.स्त्री', image: dummyImage },
-  { id: 10, name: 'श्री. व्ही. के. बाजाले', position: 'सचिव', category: 'कर्मचारी', image: dummyImage },
-  { id: 11, name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: 'कर्मचारी', image: dummyImage },
-  { id: 12, name: 'श्री. अंबादास खंडबा डोंगे', position: 'परिचालक', category: 'परिचालक', image: dummyImage }
-];
-
+  const panchayatMembers = [
+    { id: 1, name: 'सौ. लता धोंडीराम घुगे', position: 'सरपंच', category: 'ना.मा.प्र.', image: dummyImage },
+    { id: 2, name: 'श्री. नवकिशोर गणेश गवडे', position: 'उपसरपंच', category: 'सर्वसाधारण', image: dummyImage },
+    { id: 3, name: 'श्री. रमेश जयराम डोंगे', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
+    { id: 4, name: 'श्री. शंकर रामदास सोनक्के', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
+    { id: 5, name: 'सौ. दिशा गजानन भजन', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+    { id: 6, name: 'सौ. सुरेखा सुधाकर घुगे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+    { id: 7, name: 'सौ. दुर्गा प्रभाकर बोरसे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+    { id: 8, name: 'सौ. अर्चना मंगेश टाले', position: 'सदस्या', category: 'ना.मा.प्र.', image: dummyImage },
+    { id: 9, name: 'शेख रेहाना शेख मोहम्मद', position: 'सदस्या', category: 'अ.मु.स्त्री', image: dummyImage },
+    { id: 10, name: 'श्री. व्ही. के. बाजाले', position: 'सचिव', category: 'कर्मचारी', image: dummyImage },
+    { id: 11, name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: 'कर्मचारी', image: dummyImage },
+    { id: 12, name: 'श्री. अंबादास खंडबा डोंगे', position: 'परिचालक', category: 'परिचालक', image: dummyImage }
+  ];
 
   const recentEvents = [
     {
@@ -146,7 +146,12 @@ const panchayatMembers = [
                     <td>{index + 1}</td>
                     <td>
                       <div className="member-image-container">
-                        <img src={member.image} alt={member.name} className="member-image" />
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="member-image"
+                          style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '50%' }}
+                        />
                       </div>
                     </td>
                     <td>{member.name}</td>
