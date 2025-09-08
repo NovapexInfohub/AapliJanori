@@ -1,0 +1,143 @@
+import { useTranslation } from 'react-i18next';
+import HeroSection from '../components/HeroSection';
+import { Users, Award, Map } from 'lucide-react';
+import '../styles/About.css';
+
+const About = () => {
+  const { t } = useTranslation();
+
+  const achievements = [
+    {
+      year: '2023',
+      title: 'State-level Clean Village Award',
+      description: 'Recognized for exemplary waste management and sanitation practices.',
+    },
+    {
+      year: '2022',
+      title: '100% Digital Literacy',
+      description: 'Achieved digital literacy for all residents between the ages of 14-60 years.',
+    },
+    {
+      year: '2021',
+      title: 'Water Conservation Model Village',
+      description: 'Implemented innovative water harvesting and conservation techniques.',
+    },
+    {
+      year: '2020',
+      title: 'Open Defecation Free Status',
+      description: 'Successfully achieved and maintained ODF status with 100% toilet coverage.',
+    },
+    {
+      year: '2018',
+      title: 'Solar Energy Adoption',
+      description: 'First village in the district to adopt solar energy for street lighting and public facilities.',
+    },
+  ];
+
+  return (
+    <div className="about-page">
+      <HeroSection 
+        backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=compress&fit=crop&w=1200&q=80"
+      />
+
+      <section className="village-info-section">
+        <div className="container">
+          <div className="village-info-content">
+            <div className="village-image">
+              <img 
+                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=compress&w=800&q=80" 
+                alt="Janori Village Scenery" 
+              />
+            </div>
+            <div className="village-text">
+              <h2>{t('about.history.title', 'Village History')}</h2>
+              <p>{t('about.history.p1', 'Janori has a rich history dating back several centuries. The village was established by early settlers who were drawn to the fertile lands and strategic location.')}</p>
+              <p>{t('about.history.p2', 'The village has seen steady development over the years, transforming from a small agricultural settlement into a progressive rural community.')}</p>
+              <p>{t('about.history.p3', 'Cultural traditions and unity remain strong pillars of our community, binding generations together in the pursuit of collective progress.')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="demographics-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>{t('about.demographics.title', 'Village Demographics')}</h2>
+            <p>{t('about.demographics.subtitle', 'Key facts about the people and land')}</p>
+          </div>
+          
+          <div className="demographics-content">
+            <div className="demographic-item">
+              <div className="demographic-icon">
+                <Users size={48} />
+              </div>
+              <h3>{t('about.demographics.population.title', 'Population')}</h3>
+              <p>{t('about.demographics.population.total', 'Approx. 5,000 residents')}</p>
+              <ul>
+                <li>{t('about.demographics.population.male', '2,600 Males')}</li>
+                <li>{t('about.demographics.population.female', '2,400 Females')}</li>
+                <li>{t('about.demographics.population.children', '1,200 Children')}</li>
+                <li>{t('about.demographics.population.youth', '1,500 Youth')}</li>
+                <li>{t('about.demographics.population.adults', '2,000 Adults')}</li>
+                <li>{t('about.demographics.population.seniors', '300 Seniors')}</li>
+              </ul>
+            </div>
+            
+            <div className="demographic-item">
+              <div className="demographic-icon">
+                <Award size={48} />
+              </div>
+              <h3>{t('about.demographics.education.title', 'Education')}</h3>
+              <p>{t('about.demographics.education.rate', 'Literacy rate: 85%')}</p>
+              <ul>
+                <li>{t('about.demographics.education.primary', 'Primary School: 500 students')}</li>
+                <li>{t('about.demographics.education.secondary', 'Secondary School: 300 students')}</li>
+                <li>{t('about.demographics.education.graduates', '150 Graduates')}</li>
+                <li>{t('about.demographics.education.higher', '50 Higher Education students')}</li>
+                <li>{t('about.demographics.education.technical', '30 pursuing Technical Education')}</li>
+              </ul>
+            </div>
+            
+            <div className="demographic-item">
+              <div className="demographic-icon">
+                <Map size={48} />
+              </div>
+              <h3>{t('about.demographics.geography.title', 'Geography')}</h3>
+              <p>{t('about.demographics.geography.area', 'Total Area: 10 sq. km')}</p>
+              <ul>
+                <li>{t('about.demographics.geography.agricultural', '7 sq. km Agricultural land')}</li>
+                <li>{t('about.demographics.geography.residential', '2 sq. km Residential')}</li>
+                <li>{t('about.demographics.geography.forest', '0.5 sq. km Forest')}</li>
+                <li>{t('about.demographics.geography.water', '0.5 sq. km Water bodies')}</li>
+                <li>{t('about.demographics.geography.distance', '12 km from Shegaon')}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="achievements-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>{t('about.achievements.title', 'Village Achievements')}</h2>
+            <p>{t('about.achievements.subtitle', 'Recognitions and milestones that make us proud')}</p>
+          </div>
+          <div className="achievements-timeline">
+            {achievements.map((achievement) => (
+              <div key={achievement.year} className="timeline-item">
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <h3>{achievement.year}</h3>
+                  <h4>{achievement.title}</h4>
+                  <p>{achievement.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default About;

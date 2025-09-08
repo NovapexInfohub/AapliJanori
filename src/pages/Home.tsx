@@ -1,0 +1,249 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, Ambulance, Stethoscope, PhoneCall } from 'lucide-react';
+import EventCard from '../components/EventCard';
+import '../styles/Home.css';
+
+const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: "https://media.istockphoto.com/id/503160722/photo/farmer-spreads-fertilizers-in-the-field-wheat.jpg?s=612x612&w=0&k=20&c=H616JmwTXkV8LVsiriMyqx2M9W_LUHbMwKiHEsehz-E=",
+      title: "Welcome to Janori",
+      subtitle: "A model village committed to sustainable development and prosperity"
+    },
+    {
+      image: "https://media.istockphoto.com/id/1157249891/photo/shantiniketan-bolpur-india-annual-fair-in-evening.jpg?s=612x612&w=0&k=20&c=dHCev7ph_doyr0hoAEBNGDyGsqRD9eLpcsff1p7i3J8=",
+      title: "Clean Village, Beautiful Village",
+      subtitle: "Our pride, our responsibility"
+    },
+    {
+      image: "https://media.istockphoto.com/id/1060740880/photo/aerial-view-of-poor-indian-town-varsana-barsana-high-resolution-panorama-for-large-format.jpg?s=612x612&w=0&k=20&c=eFZ2CF0oUgcF23IVcsDCw9QGr6q2a6d22_4nTSJKn4c=",
+      title: "Journey of Development",
+      subtitle: "A step towards progress"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const dummyImage = "https://via.placeholder.com/300x300/000000/FFFFFF?text=Photo";
+
+const panchayatMembers = [
+  { id: 1, name: 'सौ. लता धोंडीराम घुगे', position: 'सरपंच', category: 'ना.मा.प्र.', image: dummyImage },
+  { id: 2, name: 'श्री. नवकिशोर गणेश गवडे', position: 'उपसरपंच', category: 'सर्वसाधारण', image: dummyImage },
+  { id: 3, name: 'श्री. रमेश जयराम डोंगे', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
+  { id: 4, name: 'श्री. शंकर रामदास सोनक्के', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
+  { id: 5, name: 'सौ. दिशा गजानन भजन', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+  { id: 6, name: 'सौ. सुरेखा सुधाकर घुगे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+  { id: 7, name: 'सौ. दुर्गा प्रभाकर बोरसे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+  { id: 8, name: 'सौ. अर्चना मंगेश टाले', position: 'सदस्या', category: 'ना.मा.प्र.', image: dummyImage },
+  { id: 9, name: 'शेख रेहाना शेख मोहम्मद', position: 'सदस्या', category: 'अ.मु.स्त्री', image: dummyImage },
+  { id: 10, name: 'श्री. व्ही. के. बाजाले', position: 'सचिव', category: 'कर्मचारी', image: dummyImage },
+  { id: 11, name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: 'कर्मचारी', image: dummyImage },
+  { id: 12, name: 'श्री. अंबादास खंडबा डोंगे', position: 'परिचालक', category: 'परिचालक', image: dummyImage }
+];
+
+
+  const recentEvents = [
+    {
+      id: 1,
+      image: 'https://images.pexels.com/photos/8849294/pexels-photo-8849294.jpeg',
+      title: "Blood Donation Camp",
+      date: "May 15, 2025",
+      time: "9:00 AM - 4:00 PM",
+      location: "Village Community Hall",
+      description: "Join us for the annual blood donation camp organized in association with District Hospital."
+    },
+    {
+      id: 2,
+      image: 'https://images.pexels.com/photos/8942991/pexels-photo-8942991.jpeg',
+      title: "Farmers Training Program",
+      date: "June 2, 2025",
+      time: "10:00 AM - 1:00 PM",
+      location: "Agricultural Extension Center",
+      description: "Learn about modern farming techniques and government schemes for farmers."
+    }
+  ];
+
+  return (
+    <div className="home-page">
+      {/* Hero Slider */}
+      <div className="hero-slider">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`slide ${index === currentSlide ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          >
+            <div className="slide-content">
+              <h1 className="hero-title">{slide.title}</h1>
+              <p className="hero-subtitle">{slide.subtitle}</p>
+            </div>
+          </div>
+        ))}
+        <div className="slider-dots">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Important Notice */}
+      <div className="important-notice-3d">
+        <div className="notice-scroll">
+          <span className="notice-text">
+            Important Notice: Please attend the Gram Sabha meeting on 25th June at 5:00 PM in the Village Hall. Your participation is valuable for village development!
+          </span>
+        </div>
+      </div>
+
+      {/* Welcome Section */}
+      <section className="welcome-section">
+        <div className="container">
+          <div className="welcome-content">
+            <div className="welcome-text">
+              <h2>Welcome to <span>Janori</span> Gram Panchayat</h2>
+              <p>Janori is a small but religiously and historically rich village in Buldhana district of Maharashtra. This village is located just a few kilometers from Shegaon. This place is especially famous in the Vidarbha region, as it has many ancient temples and religious traditions.</p>
+              <p>Under the visionary leadership of our Sarpanch and dedicated Panchayat members, we are working tirelessly to transform Janori into a model village with modern amenities while preserving our rich cultural heritage.</p>
+              <Link to="/about" className="btn-primary">Learn More About Us</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Panchayat Members */}
+      <section className="members-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>आमची ग्रामपंचायत सदस्य</h2>
+            <p>गावाच्या विकासासाठी समर्पित नेतृत्व</p>
+          </div>
+          
+          <div className="members-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>अ.क्र.</th>
+                  <th>छायाचित्र</th>
+                  <th>नाव</th>
+                  <th>पद</th>
+                  <th>प्रवर्ग</th>
+                </tr>
+              </thead>
+              <tbody>
+                {panchayatMembers.map((member, index) => (
+                  <tr key={member.id}>
+                    <td>{index + 1}</td>
+                    <td>
+                      <div className="member-image-container">
+                        <img src={member.image} alt={member.name} className="member-image" />
+                      </div>
+                    </td>
+                    <td>{member.name}</td>
+                    <td>{member.position}</td>
+                    <td>{member.category}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Emergency Services */}
+      <section className="emergency-services">
+        <div className="container">
+          <div className="section-header">
+            <h2>Emergency Services</h2>
+            <p>24/7 Emergency assistance for our village residents</p>
+          </div>
+          
+          <div className="emergency-grid">
+            <div className="emergency-card">
+              <div className="emergency-icon"><Ambulance size={32} /></div>
+              <h3>Ambulance Service</h3>
+              <p>Contact: 108</p>
+              <p>Alternate: +91 98765 43210</p>
+              <p>24/7 ambulance service with advanced life support</p>
+            </div>
+
+            <div className="emergency-card">
+              <div className="emergency-icon"><Stethoscope size={32} /></div>
+              <h3>Medical Emergency</h3>
+              <p>Dr. Patil: +91 98765 12345</p>
+              <p>Primary Health Center: 02135-123456</p>
+              <p>Available for emergency medical consultations</p>
+            </div>
+
+            <div className="emergency-card">
+              <div className="emergency-icon"><PhoneCall size={32} /></div>
+              <h3>Police Station</h3>
+              <p>Emergency: 100</p>
+              <p>Police Station: 02135-234567</p>
+              <p>24/7 police assistance and emergency response</p>
+            </div>
+
+            <div className="emergency-card">
+              <div className="emergency-icon"><Phone size={32} /></div>
+              <h3>Fire Emergency</h3>
+              <p>Fire Brigade: 101</p>
+              <p>Control Room: 02135-345678</p>
+              <p>Quick response fire emergency services</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events */}
+      <section className="events-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Upcoming Events</h2>
+            <p>Stay updated with the latest happenings in our village</p>
+          </div>
+          
+          <div className="events-container">
+            {recentEvents.map(event => (
+              <EventCard 
+                key={event.id}
+                image={event.image}
+                title={event.title}
+                date={event.date}
+                time={event.time}
+                location={event.location}
+                description={event.description}
+              />
+            ))}
+          </div>
+          
+          <div className="events-btn-container">
+            <Link to="/events" className="btn-secondary">View All Events</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="cta-section">
+        <div className="container">
+          <div className="cta-content">
+            <h2>Have Questions or Suggestions?</h2>
+            <p>We're here to serve you. Reach out to us with your queries or feedback.</p>
+            <Link to="/contact" className="btn-primary">Contact Us</Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
