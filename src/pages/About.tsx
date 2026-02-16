@@ -45,15 +45,21 @@ const About = () => {
           <div className="village-info-content">
             <div className="village-image">
               <img 
-                src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=compress&w=800&q=80" 
+                src="https://i.ytimg.com/vi/s2OJzfFIQ10/maxresdefault.jpg" 
                 alt="Janori Village Scenery" 
+              />
+              <br></br>
+              <img 
+               src="https://www.memeraki.com/cdn/shop/articles/Screenshot_2023-02-01_at_3.27.33_AM_1200x1200.png?v=1675202595"
+              alt="Janori Village Scenery" 
               />
             </div>
             <div className="village-text">
               <h2>{t('about.history.title', 'Village History')}</h2>
-              <p>{t('about.history.p1', 'Janori has a rich history dating back several centuries. The village was established by early settlers who were drawn to the fertile lands and strategic location.')}</p>
-              <p>{t('about.history.p2', 'The village has seen steady development over the years, transforming from a small agricultural settlement into a progressive rural community.')}</p>
-              <p>{t('about.history.p3', 'Cultural traditions and unity remain strong pillars of our community, binding generations together in the pursuit of collective progress.')}</p>
+              <p>{t('about.history.p1', 'A Sacred and Historic Religious Place in Vidarbha. Janori is a village located in the Buldhana district of Maharashtra, about 8 to 10 kilometers from Shegaon. The village is well known across Vidarbha for its ancient temples, traditional architectural style, religious customs, and spiritually charged atmosphere.')}</p>
+              <p>{t('1. Historical Background The temples of Janori were built in the 17th century. Since then, the village has acquired the status of an important religious pilgrimage center. From ancient times, saints, sages, and ascetics have resided in this village. Some of the temples in the village reflect architectural styles from the Peshwa period.')}</p>
+              <p>{t('about.history.p2', '2. Major Religious PlacesLord Narasimha TempleThis is the most prominent religious center of the village. The temple’s spire, sanctum (garbhagriha), and hall (mandap) display excellent stone craftsmanship.The temple area has dedicated spaces for meditation and religious discourses.Narasimha Jayanti is celebrated with great devotion, during which thousands of devotees visit for darshan.Mahadev Temple Located in the central part of the village, this temple hosts an all-night grand worship and vigil on the occasion of Maha Shivaratri.Mahasiddha Bhagwan TempleThis temple has a history of secret spiritual practices and tantric worship. Devotees visit here seeking good health and fulfillment of wishes.Temples of Lord Rama, Lakshmana, Sita, and Hanuman Festivals such as Ram Navami and Hanuman Jayanti are celebrated here with great enthusiasm.')}</p>
+              <p>{t('about.history.p3', '3. Information for Tourists and DevoteesThe village is easily accessible from Shegaon bus stand and railway station.Facilities such as pilgrim accommodation, dining arrangements, drinking water, and clean sanitation are available in the village. Local guides are also available for visitors and devotees.The nearby scenic surroundings, green farmlands, and peaceful environment further attract tourists.')}</p>
             </div>
           </div>
         </div>

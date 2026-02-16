@@ -36,20 +36,20 @@ const Home = () => {
   const dummyImage = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
 
   const panchayatMembers = [
-    { id: 1, name: 'सौ. लता धोंडीराम घुगे', position: 'सरपंच', category: 'ना.मा.प्र.', image: dummyImage },
-    { id: 2, name: 'श्री. नवकिशोर गणेश गवडे', position: 'उपसरपंच', category: 'सर्वसाधारण', image: dummyImage },
-    { id: 3, name: 'श्री. रमेश जयराम डोंगे', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
-    { id: 4, name: 'श्री. शंकर रामदास सोनक्के', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
-    { id: 5, name: 'सौ. दिशा गजानन भजन', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-    { id: 6, name: 'सौ. सुरेखा सुधाकर घुगे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+    { id: 1, name: 'सौ. लता धोंडूराम घेंगे', position: 'सरपंच', category: 'ना.मा.प्र.', image: dummyImage },
+    { id: 2, name: 'श्री. नंदकिशोर गणेश गावंडे', position: 'उपसरपंच', category: 'सर्वसाधारण', image: dummyImage },
+    { id: 3, name: 'श्री.रमेश जयराम डांगे', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
+    { id: 4, name: 'श्री. शंकर रामदास सोळंके', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
+    { id: 5, name: 'सौ. दिक्षा गजानन भोजने', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+    { id: 6, name: 'सौ. सौ. सुरेखा सुधाकर घेंगे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
     { id: 7, name: 'सौ. दुर्गा प्रभाकर बोरसे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-    { id: 8, name: 'सौ. अर्चना मंगेश टाले', position: 'सदस्या', category: 'ना.मा.प्र.', image: dummyImage },
-    { id: 9, name: 'शेख रेहाना शेख मोहम्मद', position: 'सदस्या', category: 'अ.मु.स्त्री', image: dummyImage },
-    { id: 10, name: 'श्री. व्ही. के. बाजाले', position: 'सचिव', category: 'कर्मचारी', image: dummyImage },
-    { id: 11, name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: 'कर्मचारी', image: dummyImage },
-    { id: 12, name: 'श्री. अंबादास खंडबा डोंगे', position: 'परिचालक', category: 'परिचालक', image: dummyImage }
+    { id: 8, name: 'सी. अर्चना मंगेश ढोले', position: 'सदस्या', category: 'ना.मा.प्र.', image: dummyImage },
+    { id: 9, name: 'शेख रेहाना शेख मोहसीन', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
+    { id: 10, name: 'श्री. डि. के. बाजोले', position: 'सचिव', category: '#', image: dummyImage },
+    { id: 11, name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: '#', image: dummyImage },
+    { id: 12, name: 'श्री. अंबादास उखर्डा डांगे', position: 'संगणक परीचालक', category: '#', image: dummyImage }
+    
   ];
-
   const recentEvents = [
     {
       id: 1,

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, User } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import logo from '../assets/logo.svg'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,11 +66,12 @@ const Navbar = () => {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMenu}>
        <div className="logo">
-        <img 
-  src="Aaplijanori_20250126_141653_0000.svg" 
-  alt="जानोरी Logo" 
+      <img 
+  src={logo} 
+  alt="Aapli Janori Logo" 
   style={{ height: "80px", width: "120px", objectFit: "contain" }} 
 />
+
 </div>
 
       <span className="text-xl font-bold tracking-wide text-white">
