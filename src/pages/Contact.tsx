@@ -1,11 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import HeroSection from '../components/HeroSection';
 import '../styles/Contact.css';
 
+// Define the shape of the success/error message state
+type SubmitMessageType = {
+  type: 'success' | 'error';
+  text: string;
+} | null;
+
 const Contact = () => {
   const { t } = useTranslation();
+  
+  // FIX 1: specific type for the form Ref (HTMLFormElement) and initialized null
+  const form = useRef<HTMLFormElement>(null);
+
+  // --- YOUR EMAILJS CREDENTIALS ---
+  const SERVICE_ID = "service_yne6s0p";
+  const ADMIN_TEMPLATE_ID = "template_gzcmwxs";
+  const USER_TEMPLATE_ID = "template_yz7nwl8";
+  const PUBLIC_KEY = "pc4JAPTpSLesoljvz";
+  // --------------------------------
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,32 +31,70 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // FIX 2: Added the generic type <SubmitMessageType> so it knows it can be an object or null
+  const [submitMessage, setSubmitMessage] = useState<SubmitMessageType>(null);
+
+  // FIX 3: Added React.ChangeEvent type for the input event
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev: any) => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // FIX 4: Added React.FormEvent type for the submit event
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage(null);
 
-    setTimeout(() => {
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,     
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    try {
+      await Promise.all([
+        // 1. Send Admin Email
+        emailjs.send(
+          SERVICE_ID,
+          ADMIN_TEMPLATE_ID,
+          templateParams,
+          PUBLIC_KEY
+        ),
+        
+        // 2. Send User Auto-Reply
+        emailjs.send(
+          SERVICE_ID,
+          USER_TEMPLATE_ID,
+          templateParams,
+          PUBLIC_KEY
+        )
+      ]);
+
       setSubmitMessage({
         type: 'success',
-        text: t('contact.formSuccess', 'Message sent successfully! We will get back to you soon.')
+        text: t('contact.formSuccess', 'Message sent successfully! We have sent a confirmation to your email.')
       });
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-      setIsSubmitting(false);
 
-      setTimeout(() => setSubmitMessage(null), 5000);
-    }, 1000);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitMessage({
+        type: 'error',
+        text: t('contact.formError', 'Failed to send message. Please try again later.')
+      });
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitMessage(null), 8000);
+    }
   };
 
   return (
@@ -102,7 +158,8 @@ const Contact = () => {
 
             <div className="contact-form-container">
               <h2>{t('contact.form.title', 'Send us a Message')}</h2>
-              <form className="contact-form" onSubmit={handleSubmit}>
+              
+              <form className="contact-form" ref={form} onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">{t('contact.form.name', 'Full Name')}</label>
                   <input type="text" id="name" name="name" required value={formData.name} onChange={handleInputChange} />
@@ -159,13 +216,14 @@ const Contact = () => {
           </div>
           <div className="map-container">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14935.781427942495!2d76.67962067725683!3d20.79599499522955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd748ed4bf6121f%3A0x45970edba96fea95!2sJanori%2C%20Maharashtra%20444203!5e0!3m2!1sen!2sin!4v1691397886901!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.347573420857!2d76.59378607584107!3d20.932916986967527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd7490216694631%3A0x6b1670601460598!2sJanori%2C%20Maharashtra%20444303!5e0!3m2!1sen!2sin!4v1709228811111!5m2!1sen!2sin" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
+              title="Janori Map"
             ></iframe>
           </div>
         </div>
