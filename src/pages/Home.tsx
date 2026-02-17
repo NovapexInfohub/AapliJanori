@@ -33,23 +33,94 @@ const Home = () => {
   }, []);
 
   // Updated to use a smaller profile silhouette placeholder (150x150 pixels)
-  const dummyImage = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
+const panchayatMembers = [
+  { 
+    id: 1, 
+    name: 'सौ. लता धोंडूराम घेंगे', 
+    position: 'सरपंच', 
+    category: 'ना.मा.प्र.', 
+    image: 'https://randomuser.me/api/portraits/women/68.jpg' 
+  },
+  { 
+    id: 2, 
+    name: 'श्री. नंदकिशोर गणेश गावंडे', 
+    position: 'उपसरपंच', 
+    category: 'सर्वसाधारण', 
+    image: 'https://randomuser.me/api/portraits/men/45.jpg' 
+  },
+  { 
+    id: 3, 
+    name: 'श्री. रमेश जयराम डांगे', 
+    position: 'सदस्य', 
+    category: 'अ.जा.', 
+    image: 'https://randomuser.me/api/portraits/men/32.jpg' 
+  },
+  { 
+    id: 4, 
+    name: 'श्री. शंकर रामदास सोळंके', 
+    position: 'सदस्य', 
+    category: 'अ.जा.', 
+    image: 'https://randomuser.me/api/portraits/men/41.jpg' 
+  },
+  { 
+    id: 5, 
+    name: 'सौ. दिक्षा गजानन भोजने', 
+    position: 'सदस्या', 
+    category: 'स.सा.स्त्री', 
+    image: 'https://randomuser.me/api/portraits/women/65.jpg' 
+  },
+  { 
+    id: 6, 
+    name: 'सौ. सुरेखा सुधाकर घेंगे', 
+    position: 'सदस्या', 
+    category: 'स.सा.स्त्री', 
+    image: 'https://randomuser.me/api/portraits/women/72.jpg' 
+  },
+  { 
+    id: 7, 
+    name: 'सौ. दुर्गा प्रभाकर बोरसे', 
+    position: 'सदस्या', 
+    category: 'स.सा.स्त्री', 
+    image: 'https://randomuser.me/api/portraits/women/50.jpg' 
+  },
+  { 
+    id: 8, 
+    name: 'सी. अर्चना मंगेश ढोले', 
+    position: 'सदस्या', 
+    category: 'ना.मा.प्र.', 
+    image: 'https://randomuser.me/api/portraits/women/48.jpg' 
+  },
+  { 
+    id: 9, 
+    name: 'शेख रेहाना शेख मोहसीन', 
+    position: 'सदस्या', 
+    category: 'स.सा.स्त्री', 
+    image: 'https://randomuser.me/api/portraits/women/60.jpg' 
+  },
+  { 
+    id: 10, 
+    name: 'श्री. डि. के. बाजोले', 
+    position: 'सचिव', 
+    category: '#', 
+    image: 'https://randomuser.me/api/portraits/men/55.jpg' 
+  },
+  { 
+    id: 11, 
+    name: 'श्री. सुरेश रामचंद्र चितोडे', 
+    position: 'कर्मचारी', 
+    category: '#', 
+    image: 'https://randomuser.me/api/portraits/men/36.jpg' 
+  },
+  { 
+    id: 12, 
+    name: 'श्री. अंबादास उखर्डा डांगे', 
+    position: 'संगणक परीचालक', 
+    category: '#', 
+    image: 'https://randomuser.me/api/portraits/men/28.jpg' 
+  }
+];
 
-  const panchayatMembers = [
-    { id: 1, name: 'सौ. लता धोंडूराम घेंगे', position: 'सरपंच', category: 'ना.मा.प्र.', image: dummyImage },
-    { id: 2, name: 'श्री. नंदकिशोर गणेश गावंडे', position: 'उपसरपंच', category: 'सर्वसाधारण', image: dummyImage },
-    { id: 3, name: 'श्री.रमेश जयराम डांगे', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
-    { id: 4, name: 'श्री. शंकर रामदास सोळंके', position: 'सदस्य', category: 'अ.जा.', image: dummyImage },
-    { id: 5, name: 'सौ. दिक्षा गजानन भोजने', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-    { id: 6, name: 'सौ. सौ. सुरेखा सुधाकर घेंगे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-    { id: 7, name: 'सौ. दुर्गा प्रभाकर बोरसे', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-    { id: 8, name: 'सी. अर्चना मंगेश ढोले', position: 'सदस्या', category: 'ना.मा.प्र.', image: dummyImage },
-    { id: 9, name: 'शेख रेहाना शेख मोहसीन', position: 'सदस्या', category: 'स.सा.स्त्री', image: dummyImage },
-    { id: 10, name: 'श्री. डि. के. बाजोले', position: 'सचिव', category: '#', image: dummyImage },
-    { id: 11, name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: '#', image: dummyImage },
-    { id: 12, name: 'श्री. अंबादास उखर्डा डांगे', position: 'संगणक परीचालक', category: '#', image: dummyImage }
-    
-  ];
+
   const recentEvents = [
     {
       id: 1,
