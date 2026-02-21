@@ -1,125 +1,55 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Ambulance, Stethoscope, PhoneCall } from 'lucide-react';
+import { Ambulance, Stethoscope, PhoneCall, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import EventCard from '../components/EventCard';
 import '../styles/Home.css';
 
 const Home = () => {
+  const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  // Memoized slides to update on language change
+  const slides = useMemo(() => [
     {
       image: "https://media.istockphoto.com/id/503160722/photo/farmer-spreads-fertilizers-in-the-field-wheat.jpg?s=612x612&w=0&k=20&c=H616JmwTXkV8LVsiriMyqx2M9W_LUHbMwKiHEsehz-E=",
-      title: "Welcome to Janori",
-      subtitle: "A model village committed to sustainable development and prosperity"
+      title: t('home.slider1Title'),
+      subtitle: t('home.slider1Subtitle')
     },
     {
       image: "https://media.istockphoto.com/id/1157249891/photo/shantiniketan-bolpur-india-annual-fair-in-evening.jpg?s=612x612&w=0&k=20&c=dHCev7ph_doyr0hoAEBNGDyGsqRD9eLpcsff1p7i3J8=",
-      title: "Clean Village, Beautiful Village",
-      subtitle: "Our pride, our responsibility"
+      title: t('home.slider2Title'),
+      subtitle: t('home.slider2Subtitle')
     },
     {
       image: "https://media.istockphoto.com/id/1060740880/photo/aerial-view-of-poor-indian-town-varsana-barsana-high-resolution-panorama-for-large-format.jpg?s=612x612&w=0&k=20&c=eFZ2CF0oUgcF23IVcsDCw9QGr6q2a6d22_4nTSJKn4c=",
-      title: "Journey of Development",
-      subtitle: "A step towards progress"
+      title: t('home.slider3Title'),
+      subtitle: t('home.slider3Subtitle')
     }
+  ], [t]);
+
+  // Member images are constant, so we map them to the translated data
+  const memberImages = [
+    'https://randomuser.me/api/portraits/women/68.jpg',
+    'https://randomuser.me/api/portraits/men/45.jpg',
+    'https://randomuser.me/api/portraits/men/32.jpg',
+    'https://randomuser.me/api/portraits/men/41.jpg',
+    'https://randomuser.me/api/portraits/women/65.jpg',
+    'https://randomuser.me/api/portraits/women/72.jpg',
+    'https://randomuser.me/api/portraits/women/50.jpg',
+    'https://randomuser.me/api/portraits/women/48.jpg',
+    'https://randomuser.me/api/portraits/women/60.jpg',
+    'https://randomuser.me/api/portraits/men/55.jpg',
+    'https://randomuser.me/api/portraits/men/36.jpg',
+    'https://randomuser.me/api/portraits/men/28.jpg'
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Updated to use a smaller profile silhouette placeholder (150x150 pixels)
-const panchayatMembers = [
-  { 
-    id: 1, 
-    name: 'सौ. लता धोंडूराम घेंगे', 
-    position: 'सरपंच', 
-    category: 'ना.मा.प्र.', 
-    image: 'https://randomuser.me/api/portraits/women/68.jpg' 
-  },
-  { 
-    id: 2, 
-    name: 'श्री. नंदकिशोर गणेश गावंडे', 
-    position: 'उपसरपंच', 
-    category: 'सर्वसाधारण', 
-    image: 'https://randomuser.me/api/portraits/men/45.jpg' 
-  },
-  { 
-    id: 3, 
-    name: 'श्री. रमेश जयराम डांगे', 
-    position: 'सदस्य', 
-    category: 'अ.जा.', 
-    image: 'https://randomuser.me/api/portraits/men/32.jpg' 
-  },
-  { 
-    id: 4, 
-    name: 'श्री. शंकर रामदास सोळंके', 
-    position: 'सदस्य', 
-    category: 'अ.जा.', 
-    image: 'https://randomuser.me/api/portraits/men/41.jpg' 
-  },
-  { 
-    id: 5, 
-    name: 'सौ. दिक्षा गजानन भोजने', 
-    position: 'सदस्या', 
-    category: 'स.सा.स्त्री', 
-    image: 'https://randomuser.me/api/portraits/women/65.jpg' 
-  },
-  { 
-    id: 6, 
-    name: 'सौ. सुरेखा सुधाकर घेंगे', 
-    position: 'सदस्या', 
-    category: 'स.सा.स्त्री', 
-    image: 'https://randomuser.me/api/portraits/women/72.jpg' 
-  },
-  { 
-    id: 7, 
-    name: 'सौ. दुर्गा प्रभाकर बोरसे', 
-    position: 'सदस्या', 
-    category: 'स.सा.स्त्री', 
-    image: 'https://randomuser.me/api/portraits/women/50.jpg' 
-  },
-  { 
-    id: 8, 
-    name: 'सी. अर्चना मंगेश ढोले', 
-    position: 'सदस्या', 
-    category: 'ना.मा.प्र.', 
-    image: 'https://randomuser.me/api/portraits/women/48.jpg' 
-  },
-  { 
-    id: 9, 
-    name: 'शेख रेहाना शेख मोहसीन', 
-    position: 'सदस्या', 
-    category: 'स.सा.स्त्री', 
-    image: 'https://randomuser.me/api/portraits/women/60.jpg' 
-  },
-  { 
-    id: 10, 
-    name: 'श्री. डि. के. बाजोले', 
-    position: 'सचिव', 
-    category: '#', 
-    image: 'https://randomuser.me/api/portraits/men/55.jpg' 
-  },
-  { 
-    id: 11, 
-    name: 'श्री. सुरेश रामचंद्र चितोडे', 
-    position: 'कर्मचारी', 
-    category: '#', 
-    image: 'https://randomuser.me/api/portraits/men/36.jpg' 
-  },
-  { 
-    id: 12, 
-    name: 'श्री. अंबादास उखर्डा डांगे', 
-    position: 'संगणक परीचालक', 
-    category: '#', 
-    image: 'https://randomuser.me/api/portraits/men/28.jpg' 
-  }
-];
-
+  // This fetches the translated array from your config.ts
+  const translatedMembers = t('home.membersList', { returnObjects: true }) as Array<{
+    name: string;
+    position: string;
+    category: string;
+  }>;
 
   const recentEvents = [
     {
@@ -141,6 +71,13 @@ const panchayatMembers = [
       description: "Learn about modern farming techniques and government schemes for farmers."
     }
   ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   return (
     <div className="home-page">
@@ -172,9 +109,7 @@ const panchayatMembers = [
       {/* Important Notice */}
       <div className="important-notice-3d">
         <div className="notice-scroll">
-          <span className="notice-text">
-            Important Notice: Please attend the Gram Sabha meeting on 25th June at 5:00 PM in the Village Hall. Your participation is valuable for village development!
-          </span>
+          <span className="notice-text">{t('home.notice')}</span>
         </div>
       </div>
 
@@ -183,10 +118,10 @@ const panchayatMembers = [
         <div className="container">
           <div className="welcome-content">
             <div className="welcome-text">
-              <h2>Welcome to <span>Janori</span> Gram Panchayat</h2>
-              <p>Janori is a small but religiously and historically rich village in Buldhana district of Maharashtra. This village is located just a few kilometers from Shegaon. This place is especially famous in the Vidarbha region, as it has many ancient temples and religious traditions.</p>
-              <p>Under the visionary leadership of our Sarpanch and dedicated Panchayat members, we are working tirelessly to transform Janori into a model village with modern amenities while preserving our rich cultural heritage.</p>
-              <Link to="/about" className="btn-primary">Learn More About Us</Link>
+              <h2>{t('home.welcomeTitle')}</h2>
+              <p>{t('home.welcomeText1')}</p>
+              <p>{t('home.welcomeText2')}</p>
+              <Link to="/about" className="btn-primary">{t('home.learnMore')}</Link>
             </div>
           </div>
         </div>
@@ -196,29 +131,29 @@ const panchayatMembers = [
       <section className="members-section">
         <div className="container">
           <div className="section-header">
-            <h2>आमची ग्रामपंचायत सदस्य</h2>
-            <p>गावाच्या विकासासाठी समर्पित नेतृत्व</p>
+            <h2>{t('home.membersTitle')}</h2>
+            <p>{t('home.membersSubtitle')}</p>
           </div>
           
           <div className="members-table">
             <table>
               <thead>
                 <tr>
-                  <th>अ.क्र.</th>
-                  <th>छायाचित्र</th>
-                  <th>नाव</th>
-                  <th>पद</th>
-                  <th>प्रवर्ग</th>
+                  <th>{t('home.memberTable.sr')}</th>
+                  <th>{t('home.memberTable.photo')}</th>
+                  <th>{t('home.memberTable.name')}</th>
+                  <th>{t('home.memberTable.role')}</th>
+                  <th>{t('home.memberTable.category')}</th>
                 </tr>
               </thead>
               <tbody>
-                {panchayatMembers.map((member, index) => (
-                  <tr key={member.id}>
+                {Array.isArray(translatedMembers) && translatedMembers.map((member, index) => (
+                  <tr key={index}>
                     <td>{index + 1}</td>
                     <td>
                       <div className="member-image-container">
                         <img 
-                          src={member.image} 
+                          src={memberImages[index]} 
                           alt={member.name} 
                           className="member-image"
                           style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '50%' }}
@@ -240,41 +175,37 @@ const panchayatMembers = [
       <section className="emergency-services">
         <div className="container">
           <div className="section-header">
-            <h2>Emergency Services</h2>
-            <p>24/7 Emergency assistance for our village residents</p>
+            <h2>{t('home.emergencyTitle')}</h2>
+            <p>{t('home.emergencySubtitle')}</p>
           </div>
           
           <div className="emergency-grid">
             <div className="emergency-card">
               <div className="emergency-icon"><Ambulance size={32} /></div>
-              <h3>Ambulance Service</h3>
+              <h3>{t('home.ambulance')}</h3>
               <p>Contact: 108</p>
               <p>Alternate: +91 98765 43210</p>
-              <p>24/7 ambulance service with advanced life support</p>
             </div>
 
             <div className="emergency-card">
               <div className="emergency-icon"><Stethoscope size={32} /></div>
-              <h3>Medical Emergency</h3>
+              <h3>{t('home.medical')}</h3>
               <p>Dr. Patil: +91 98765 12345</p>
-              <p>Primary Health Center: 02135-123456</p>
-              <p>Available for emergency medical consultations</p>
+              <p>PHC: 02135-123456</p>
             </div>
 
             <div className="emergency-card">
               <div className="emergency-icon"><PhoneCall size={32} /></div>
-              <h3>Police Station</h3>
+              <h3>{t('home.police')}</h3>
               <p>Emergency: 100</p>
-              <p>Police Station: 02135-234567</p>
-              <p>24/7 police assistance and emergency response</p>
+              <p>Station: 02135-234567</p>
             </div>
 
             <div className="emergency-card">
               <div className="emergency-icon"><Phone size={32} /></div>
-              <h3>Fire Emergency</h3>
-              <p>Fire Brigade: 101</p>
-              <p>Control Room: 02135-345678</p>
-              <p>Quick response fire emergency services</p>
+              <h3>{t('home.fire')}</h3>
+              <p>Fire: 101</p>
+              <p>Control: 02135-345678</p>
             </div>
           </div>
         </div>
@@ -284,8 +215,8 @@ const panchayatMembers = [
       <section className="events-section">
         <div className="container">
           <div className="section-header">
-            <h2>Upcoming Events</h2>
-            <p>Stay updated with the latest happenings in our village</p>
+            <h2>{t('home.eventsTitle')}</h2>
+            <p>{t('home.eventsSubtitle')}</p>
           </div>
           
           <div className="events-container">
@@ -303,7 +234,7 @@ const panchayatMembers = [
           </div>
           
           <div className="events-btn-container">
-            <Link to="/events" className="btn-secondary">View All Events</Link>
+            <Link to="/events" className="btn-secondary">{t('home.viewAllEvents')}</Link>
           </div>
         </div>
       </section>
@@ -312,9 +243,9 @@ const panchayatMembers = [
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Have Questions or Suggestions?</h2>
-            <p>We're here to serve you. Reach out to us with your queries or feedback.</p>
-            <Link to="/contact" className="btn-primary">Contact Us</Link>
+            <h2>{t('home.ctaTitle')}</h2>
+            <p>{t('home.ctaText')}</p>
+            <Link to="/contact" className="btn-primary">{t('home.contactBtn')}</Link>
           </div>
         </div>
       </section>

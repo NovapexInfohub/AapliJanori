@@ -81,7 +81,7 @@ const Contact = () => {
 
       setSubmitMessage({
         type: 'success',
-        text: t('contact.formSuccess', 'Message sent successfully! We have sent a confirmation to your email.')
+        text: t('contact.form.success')
       });
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
 
@@ -89,7 +89,7 @@ const Contact = () => {
       console.error('EmailJS Error:', error);
       setSubmitMessage({
         type: 'error',
-        text: t('contact.formError', 'Failed to send message. Please try again later.')
+        text: t('contact.form.error')
       });
     } finally {
       setIsSubmitting(false);
@@ -100,8 +100,8 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <HeroSection 
-        title={t('contact.title', 'Contact Us')}
-        subtitle={t('contact.subtitle', 'Reach out to the Janori Gram Panchayat')}
+        title={t('contact.hero.title')}
+        subtitle={t('contact.hero.subtitle')}
         backgroundImage="https://images.pexels.com/photos/1655901/pexels-photo-1655901.jpeg"
       />
 
@@ -109,47 +109,47 @@ const Contact = () => {
         <div className="container">
           <div className="contact-container">
             <div className="contact-info">
-              <h2>{t('contact.getInTouch.title', 'Get in Touch')}</h2>
-              <p>{t('contact.getInTouch.description', 'We are here to assist you with any queries or concerns. Feel free to reach out to us through any of the following channels:')}</p>
+              <h2>{t('contact.getInTouch.title')}</h2>
+              <p>{t('contact.getInTouch.description')}</p>
               <div className="contact-details">
                 <div className="contact-item">
                   <MapPin size={24} className="contact-icon" />
                   <div className="contact-text">
-                    <h3>{t('contact.address.title', 'Our Address')}</h3>
+                    <h3>{t('contact.address.title')}</h3>
                     <p>
-                      {t('contact.address.line1', 'Gram Panchayat Office, Main Road')}<br />
-                      {t('contact.address.line2', 'Janori, Taluka Shegaon')}<br />
-                      {t('contact.address.line3', 'District Buldhana, Maharashtra - 444203')}
+                      {t('contact.address.line1')}<br />
+                      {t('contact.address.line2')}<br />
+                      {t('contact.address.line3')}
                     </p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Phone size={24} className="contact-icon" />
                   <div className="contact-text">
-                    <h3>{t('contact.phone.title', 'Phone Numbers')}</h3>
+                    <h3>{t('contact.phone.title')}</h3>
                     <p>
-                      {t('contact.phone.office', 'Gram Panchayat: +91 07265-252525')}<br />
-                      {t('contact.phone.sarpanch', 'Gram Sevak: +91 94xxxxxx10')}
+                      {t('contact.phone.office')}<br />
+                      {t('contact.phone.sarpanch')}
                     </p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Mail size={24} className="contact-icon" />
                   <div className="contact-text">
-                    <h3>{t('contact.email.title', 'Email Address')}</h3>
+                    <h3>{t('contact.email.title')}</h3>
                     <p>
-                      {t('contact.email.primary', 'grampanchayat.janori-bld@maharashtra.gov.in')}<br />
-                      {t('contact.email.help', 'helpdesk.janori@gmail.com')}
+                      {t('contact.email.primary')}<br />
+                      {t('contact.email.help')}
                     </p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Clock size={24} className="contact-icon" />
                   <div className="contact-text">
-                    <h3>{t('contact.hours.title', 'Office Hours')}</h3>
+                    <h3>{t('contact.hours.title')}</h3>
                     <p>
-                      {t('contact.hours.weekdays', 'Monday to Saturday: 09:30 AM - 6:00 PM')}<br />
-                      {t('contact.hours.holidays', 'Closed on Sundays & Government Holidays')}
+                      {t('contact.hours.weekdays')}<br />
+                      {t('contact.hours.holidays')}
                     </p>
                   </div>
                 </div>
@@ -157,27 +157,27 @@ const Contact = () => {
             </div>
 
             <div className="contact-form-container">
-              <h2>{t('contact.form.title', 'Send us a Message')}</h2>
+              <h2>{t('contact.form.title')}</h2>
               
               <form className="contact-form" ref={form} onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="name">{t('contact.form.name', 'Full Name')}</label>
+                  <label htmlFor="name">{t('contact.form.name')}</label>
                   <input type="text" id="name" name="name" required value={formData.name} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="email">{t('contact.form.email', 'Email Address')}</label>
+                  <label htmlFor="email">{t('contact.form.email')}</label>
                   <input type="email" id="email" name="email" required value={formData.email} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone">{t('contact.form.phone', 'Phone Number')}</label>
+                  <label htmlFor="phone">{t('contact.form.phone')}</label>
                   <input type="tel" id="phone" name="phone" required value={formData.phone} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="subject">{t('contact.form.subject', 'Subject')}</label>
+                  <label htmlFor="subject">{t('contact.form.subject')}</label>
                   <input type="text" id="subject" name="subject" required value={formData.subject} onChange={handleInputChange} />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="message">{t('contact.form.message', 'Your Message')}</label>
+                  <label htmlFor="message">{t('contact.form.message')}</label>
                   <textarea id="message" name="message" rows={5} required value={formData.message} onChange={handleInputChange}></textarea>
                 </div>
                 <button type="submit" className="submit-btn" disabled={isSubmitting}>
@@ -187,12 +187,12 @@ const Contact = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                       </svg>
-                      {t('contact.form.submitting', 'Sending...')}
+                      {t('contact.form.submitting')}
                     </>
                   ) : (
                     <>
                       <Send size={16} />
-                      {t('contact.form.submit', 'Send Message')}
+                      {t('contact.form.submit')}
                     </>
                   )}
                 </button>
@@ -211,8 +211,8 @@ const Contact = () => {
       <section className="map-section">
         <div className="container">
           <div className="section-header">
-            <h2>{t('contact.map.title', 'Find Us')}</h2>
-            <p>{t('contact.map.subtitle', 'Visit our office in Janori village')}</p>
+            <h2>{t('contact.map.title')}</h2>
+            <p>{t('contact.map.subtitle')}</p>
           </div>
           <div className="map-container">
             <iframe 

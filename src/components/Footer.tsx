@@ -1,8 +1,11 @@
-import { Link, NavLink } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import '../styles/Footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="container">
@@ -10,10 +13,9 @@ const Footer = () => {
           
           {/* About Section */}
           <div className="footer-section about">
-            <h3 className="footer-title">Janori Gram Panchayat</h3>
+            <h3 className="footer-title">{t('footer.about.title')}</h3>
             <p>
-              Serving the residents of Janori village with dedication and transparency,
-              working together for rural development and community welfare.
+              {t('footer.about.description')}
             </p>
             <div className="social-media">
               <a href="https://facebook.com" aria-label="Facebook" className="social-icon" target="_blank" rel="noopener noreferrer">
@@ -30,32 +32,32 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="footer-section links">
-            <h3 className="footer-title">Quick Links</h3>
+            <h3 className="footer-title">{t('footer.quickLinks.title')}</h3>
             <ul>
-              <li><NavLink to="/" end>Home</NavLink></li>
-              <li><NavLink to="/about">About Us</NavLink></li>
-              <li><NavLink to="/services">Services</NavLink></li>
-              <li><NavLink to="/events">Events</NavLink></li>
-              <li><NavLink to="/gallery">Gallery</NavLink></li>
-              <li><NavLink to="/contact">Contact</NavLink></li>
+              <li><NavLink to="/" end>{t('nav.home')}</NavLink></li>
+              <li><NavLink to="/about">{t('nav.about')}</NavLink></li>
+              <li><NavLink to="/services">{t('nav.services')}</NavLink></li>
+              <li><NavLink to="/events">{t('nav.events')}</NavLink></li>
+              <li><NavLink to="/gallery">{t('nav.gallery')}</NavLink></li>
+              <li><NavLink to="/contact">{t('nav.contact')}</NavLink></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="footer-section contact">
-            <h3 className="footer-title">Contact Info</h3>
+            <h3 className="footer-title">{t('footer.contactInfo.title')}</h3>
             <div className="contact-info">
               <p>
                 <MapPin size={16} className="contact-icon" />
-                At Post Janori, Tq. Shegaon, Dist. Buldhana, Pin 444203
+                {t('footer.contactInfo.address')}
               </p>
               <p>
                 <Phone size={16} className="contact-icon" />
-                +91 98765 43210
+                {t('footer.contactInfo.phone')}
               </p>
               <p>
                 <Mail size={16} className="contact-icon" />
-                grampanchayat.janori@gov.in
+                {t('footer.contactInfo.email')}
               </p>
             </div>
           </div>
@@ -63,7 +65,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Janori Gram Panchayat. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {t('footer.about.title')}. {t('footer.bottom.rights')}</p>
         </div>
       </div>
     </footer>

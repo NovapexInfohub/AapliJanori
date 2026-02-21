@@ -9,28 +9,28 @@ const About = () => {
   const achievements = [
     {
       year: '2023',
-      title: 'State-level Clean Village Award',
-      description: 'Recognized for exemplary waste management and sanitation practices.',
+      title: t('about.achievements.items.2023.title'),
+      description: t('about.achievements.items.2023.description'),
     },
     {
       year: '2022',
-      title: '100% Digital Literacy',
-      description: 'Achieved digital literacy for all residents between the ages of 14-60 years.',
+      title: t('about.achievements.items.2022.title'),
+      description: t('about.achievements.items.2022.description'),
     },
     {
       year: '2021',
-      title: 'Water Conservation Model Village',
-      description: 'Implemented innovative water harvesting and conservation techniques.',
+      title: t('about.achievements.items.2021.title'),
+      description: t('about.achievements.items.2021.description'),
     },
     {
       year: '2020',
-      title: 'Open Defecation Free Status',
-      description: 'Successfully achieved and maintained ODF status with 100% toilet coverage.',
+      title: t('about.achievements.items.2020.title'),
+      description: t('about.achievements.items.2020.description'),
     },
     {
       year: '2018',
-      title: 'Solar Energy Adoption',
-      description: 'First village in the district to adopt solar energy for street lighting and public facilities.',
+      title: t('about.achievements.items.2018.title'),
+      description: t('about.achievements.items.2018.description'),
     },
   ];
 
@@ -55,11 +55,11 @@ const About = () => {
               />
             </div>
             <div className="village-text">
-              <h2>{t('about.history.title', 'Village History')}</h2>
-              <p>{t('about.history.p1', 'A Sacred and Historic Religious Place in Vidarbha. Janori is a village located in the Buldhana district of Maharashtra, about 8 to 10 kilometers from Shegaon. The village is well known across Vidarbha for its ancient temples, traditional architectural style, religious customs, and spiritually charged atmosphere.')}</p>
-              <p>{t('1. Historical Background The temples of Janori were built in the 17th century. Since then, the village has acquired the status of an important religious pilgrimage center. From ancient times, saints, sages, and ascetics have resided in this village. Some of the temples in the village reflect architectural styles from the Peshwa period.')}</p>
-              <p>{t('about.history.p2', '2. Major Religious PlacesLord Narasimha TempleThis is the most prominent religious center of the village. The temple’s spire, sanctum (garbhagriha), and hall (mandap) display excellent stone craftsmanship.The temple area has dedicated spaces for meditation and religious discourses.Narasimha Jayanti is celebrated with great devotion, during which thousands of devotees visit for darshan.Mahadev Temple Located in the central part of the village, this temple hosts an all-night grand worship and vigil on the occasion of Maha Shivaratri.Mahasiddha Bhagwan TempleThis temple has a history of secret spiritual practices and tantric worship. Devotees visit here seeking good health and fulfillment of wishes.Temples of Lord Rama, Lakshmana, Sita, and Hanuman Festivals such as Ram Navami and Hanuman Jayanti are celebrated here with great enthusiasm.')}</p>
-              <p>{t('about.history.p3', '3. Information for Tourists and DevoteesThe village is easily accessible from Shegaon bus stand and railway station.Facilities such as pilgrim accommodation, dining arrangements, drinking water, and clean sanitation are available in the village. Local guides are also available for visitors and devotees.The nearby scenic surroundings, green farmlands, and peaceful environment further attract tourists.')}</p>
+              <h2>{t('about.history.title')}</h2>
+              <p>{t('about.history.p1')}</p>
+              <p>{t('about.history.p2')}</p>
+              <p>{t('about.history.p3')}</p>
+              <p>{t('about.history.p4')}</p>
             </div>
           </div>
         </div>
@@ -68,8 +68,8 @@ const About = () => {
       <section className="demographics-section">
         <div className="container">
           <div className="section-header">
-            <h2>{t('about.demographics.title', 'Village Demographics')}</h2>
-            <p>{t('about.demographics.subtitle', 'Key facts about the people and land')}</p>
+            <h2>{t('about.demographics.title')}</h2>
+            <p>{t('about.demographics.subtitle')}</p>
           </div>
           
           <div className="demographics-content">
@@ -77,15 +77,15 @@ const About = () => {
               <div className="demographic-icon">
                 <Users size={48} />
               </div>
-              <h3>{t('about.demographics.population.title', 'Population')}</h3>
-              <p>{t('about.demographics.population.total', 'Approx. 5,000 residents')}</p>
+              <h3>{t('about.demographics.population.title')}</h3>
+              <p>{t('about.demographics.population.total')}</p>
               <ul>
-                <li>{t('about.demographics.population.male', '2,600 Males')}</li>
-                <li>{t('about.demographics.population.female', '2,400 Females')}</li>
-                <li>{t('about.demographics.population.children', '1,200 Children')}</li>
-                <li>{t('about.demographics.population.youth', '1,500 Youth')}</li>
-                <li>{t('about.demographics.population.adults', '2,000 Adults')}</li>
-                <li>{t('about.demographics.population.seniors', '300 Seniors')}</li>
+                <li>{t('about.demographics.population.male')}</li>
+                <li>{t('about.demographics.population.female')}</li>
+                <li>{t('about.demographics.population.children')}</li>
+                <li>{t('about.demographics.population.youth')}</li>
+                <li>{t('about.demographics.population.adults')}</li>
+                <li>{t('about.demographics.population.seniors')}</li>
               </ul>
             </div>
             
@@ -93,14 +93,14 @@ const About = () => {
               <div className="demographic-icon">
                 <Award size={48} />
               </div>
-              <h3>{t('about.demographics.education.title', 'Education')}</h3>
-              <p>{t('about.demographics.education.rate', 'Literacy rate: 85%')}</p>
+              <h3>{t('about.demographics.education.title')}</h3>
+              <p>{t('about.demographics.education.rate')}</p>
               <ul>
-                <li>{t('about.demographics.education.primary', 'Primary School: 500 students')}</li>
-                <li>{t('about.demographics.education.secondary', 'Secondary School: 300 students')}</li>
-                <li>{t('about.demographics.education.graduates', '150 Graduates')}</li>
-                <li>{t('about.demographics.education.higher', '50 Higher Education students')}</li>
-                <li>{t('about.demographics.education.technical', '30 pursuing Technical Education')}</li>
+                <li>{t('about.demographics.education.primary')}</li>
+                <li>{t('about.demographics.education.secondary')}</li>
+                <li>{t('about.demographics.education.graduates')}</li>
+                <li>{t('about.demographics.education.higher')}</li>
+                <li>{t('about.demographics.education.technical')}</li>
               </ul>
             </div>
             
@@ -108,14 +108,14 @@ const About = () => {
               <div className="demographic-icon">
                 <Map size={48} />
               </div>
-              <h3>{t('about.demographics.geography.title', 'Geography')}</h3>
-              <p>{t('about.demographics.geography.area', 'Total Area: 10 sq. km')}</p>
+              <h3>{t('about.demographics.geography.title')}</h3>
+              <p>{t('about.demographics.geography.area')}</p>
               <ul>
-                <li>{t('about.demographics.geography.agricultural', '7 sq. km Agricultural land')}</li>
-                <li>{t('about.demographics.geography.residential', '2 sq. km Residential')}</li>
-                <li>{t('about.demographics.geography.forest', '0.5 sq. km Forest')}</li>
-                <li>{t('about.demographics.geography.water', '0.5 sq. km Water bodies')}</li>
-                <li>{t('about.demographics.geography.distance', '12 km from Shegaon')}</li>
+                <li>{t('about.demographics.geography.agricultural')}</li>
+                <li>{t('about.demographics.geography.residential')}</li>
+                <li>{t('about.demographics.geography.forest')}</li>
+                <li>{t('about.demographics.geography.water')}</li>
+                <li>{t('about.demographics.geography.distance')}</li>
               </ul>
             </div>
           </div>
@@ -125,8 +125,8 @@ const About = () => {
       <section className="achievements-section">
         <div className="container">
           <div className="section-header">
-            <h2>{t('about.achievements.title', 'Village Achievements')}</h2>
-            <p>{t('about.achievements.subtitle', 'Recognitions and milestones that make us proud')}</p>
+            <h2>{t('about.achievements.title')}</h2>
+            <p>{t('about.achievements.subtitle')}</p>
           </div>
           <div className="achievements-timeline">
             {achievements.map((achievement) => (

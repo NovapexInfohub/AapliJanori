@@ -26,50 +26,50 @@ const Services = () => {
     {
       id: 1,
       icon: <FileText size={32} />,
-      title: t('services.certificates.title', 'Certificate Issuance'),
-      description: t('services.certificates.description', 'Birth, death, residence, income, and other essential certificates issued efficiently for village residents of Janori.')
+      title: t('services.certificates.title'),
+      description: t('services.certificates.description')
     },
     {
       id: 2,
       icon: <Calendar size={32} />,
-      title: t('services.hallBooking.title', 'Community Hall Booking'),
-      description: t('services.hallBooking.description', 'Book our well-equipped community hall in Janori for various events, functions, and gatherings at affordable rates.')
+      title: t('services.hallBooking.title'),
+      description: t('services.hallBooking.description')
     },
     {
       id: 3,
       icon: <Award size={32} />,
-      title: t('services.schemes.title', 'Scheme Registration'),
-      description: t('services.schemes.description', 'Assistance in applying for various government welfare schemes, subsidies, and benefits for eligible residents of Janori.')
+      title: t('services.schemes.title'),
+      description: t('services.schemes.description')
     },
     {
       id: 4,
       icon: <Users size={32} />,
-      title: t('services.dispute.title', 'Dispute Resolution'),
-      description: t('services.dispute.description', 'Traditional Janori village-level dispute resolution mechanism to resolve conflicts amicably within the community.')
+      title: t('services.dispute.title'),
+      description: t('services.dispute.description')
     },
     {
       id: 5,
       icon: <BookOpen size={32} />,
-      title: t('services.library.title', 'Library Services'),
-      description: t('services.library.description', 'Access to our Janori village library with a collection of books, newspapers, and educational resources.')
+      title: t('services.library.title'),
+      description: t('services.library.description')
     },
     {
       id: 6,
       icon: <Home size={32} />,
-      title: t('services.housing.title', 'Housing Assistance'),
-      description: t('services.housing.description', 'Guidance for government housing schemes like PMAY-G for eligible beneficiaries in Janori village.')
+      title: t('services.housing.title'),
+      description: t('services.housing.description')
     },
     {
       id: 7,
       icon: <Heart size={32} />,
-      title: t('services.health.title', 'Health Services'),
-      description: t('services.health.description', 'Coordination with primary health center for regular health camps and awareness programs in Janori.')
+      title: t('services.health.title'),
+      description: t('services.health.description')
     },
     {
       id: 8,
       icon: <Percent size={32} />,
-      title: t('services.tax.title', 'Tax Collection'),
-      description: t('services.tax.description', 'Collection of property tax, water charges, and other local taxes for Janori village development.')
+      title: t('services.tax.title'),
+      description: t('services.tax.description')
     }
   ];
 
@@ -101,16 +101,16 @@ const Services = () => {
   return (
     <div className="services-page">
       <HeroSection
-        title={t('services.title', 'Our Services')}
-        subtitle={t('services.subtitle', 'Comprehensive services and schemes for the welfare of our residents')}
+        title={t('services.title')}
+        subtitle={t('services.subtitle')}
         backgroundImage="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=compress&fit=crop&w=1200&q=80"
       />
 
       <section className="services-list-section">
         <div className="container">
           <div className="section-header">
-            <h2>Village Services</h2>
-            <p>Comprehensive services for our community members</p>
+            <h2>{t('services.sectionTitle')}</h2>
+            <p>{t('services.sectionSubtitle')}</p>
           </div>
           <div className="services-grid">
             {services.map(service => (
@@ -128,8 +128,8 @@ const Services = () => {
       <section className="documentation-section">
         <div className="container">
           <div className="section-header">
-            <h2>{t('services.docs.title', 'Gram Panchayat Documentation')}</h2>
-            <p>{t('services.docs.subtitle', 'Download brochures and important documents or upload your own PDFs.')}</p>
+            <h2>{t('services.docs.title')}</h2>
+            <p>{t('services.docs.subtitle')}</p>
           </div>
           {isAdmin && (
             <div className="docs-upload">
@@ -142,13 +142,13 @@ const Services = () => {
                 style={{ display: 'none' }}
               />
               <button className="docs-upload-btn" onClick={() => fileInputRef.current?.click()}>
-                {t('services.docs.uploadBtn', 'Upload File')}
+                {t('services.docs.uploadBtn')}
               </button>
             </div>
           )}
           <div className="docs-list">
             {documents.length === 0 ? (
-              <p>{t('services.docs.noDocs', 'No documents uploaded yet.')}</p>
+              <p>{t('services.docs.noDocs')}</p>
             ) : (
               <ul>
                 {documents.map(doc => (
@@ -164,14 +164,14 @@ const Services = () => {
                         a.click();
                       }}
                     >
-                      {t('services.docs.download', 'Download')}
+                      {t('services.docs.download')}
                     </button>
                     <button className="docs-preview-btn" onClick={() => setPreviewUrl(doc.url)}>
-                      {t('services.docs.preview', 'Preview')}
+                      {t('services.docs.preview')}
                     </button>
                     {isAdmin && (
                       <button className="docs-delete-btn" onClick={() => handleDelete(doc.id)}>
-                        Delete
+                        {t('services.docs.delete')}
                       </button>
                     )}
                   </li>
