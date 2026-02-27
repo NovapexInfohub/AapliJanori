@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo } from 'react'; 
 import { Link } from 'react-router-dom';
 import { Ambulance, Stethoscope, PhoneCall, Phone, Landmark as TempleIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -15,6 +15,15 @@ import templeImg6 from '../assets/temple img/img6.jpeg';
 import templeImg7 from '../assets/temple img/img7.jpeg';
 import templeImg8 from '../assets/temple img/img8.jpeg';
 import templeImg9 from '../assets/temple img/img9.jpeg';
+
+// Declare global Elfsight namespace
+declare global {
+  interface Window {
+    elfsight?: {
+      init?: () => void;
+    };
+  }
+}
 
 const Home = () => {
   const { t } = useTranslation();
@@ -89,6 +98,17 @@ const Home = () => {
       description: "Learn about modern farming techniques and government schemes for farmers."
     }
   ];
+
+  // Load Elfsight script dynamically
+  useEffect(() => {
+    // Check if script already exists
+    if (!document.querySelector('script[src="https://static.elfsight.com/platform/platform.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://static.elfsight.com/platform/platform.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -323,6 +343,22 @@ const Home = () => {
             <p>{t('home.ctaText')}</p>
             <Link to="/contact" className="btn-primary">{t('home.contactBtn')}</Link>
           </div>
+        </div>
+      </section>
+
+      {/* Instagram Feed Section */}
+      <section className="instagram-feed-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>{t('home.instagramTitle') || 'Follow Us on Instagram'}</h2>
+            <p>{t('home.instagramSubtitle') || '@janori_grampanchayat'}</p>
+          </div>
+          
+          {/* Elfsight Instagram Feed */}
+          <div 
+            className="elfsight-app-a874f6ef-0f60-4bd4-b1b9-6caebe1c31a1" 
+            data-elfsight-app-lazy
+          ></div>
         </div>
       </section>
     </div>
