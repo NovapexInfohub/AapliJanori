@@ -426,3 +426,154 @@
     gap: 8px;
   }
 }
+/* ========================================= */
+/* 🔥 DARK MODE SUPPORT – EVENTS PAGE */
+/* ========================================= */
+
+body.dark .events-list-section {
+  background-color: #1e1e1e;
+}
+
+/* Search */
+body.dark .search-icon {
+  color: #aaaaaa;
+}
+
+body.dark .search-input {
+  background-color: #222;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark .search-input::placeholder {
+  color: #999;
+}
+
+body.dark .search-input:focus {
+  border-color: #ff7722;
+  box-shadow: 0 0 0 3px rgba(255, 119, 34, 0.25);
+}
+
+/* No Events */
+body.dark .no-events {
+  background-color: #222;
+  color: #cccccc;
+}
+
+body.dark .no-events svg {
+  color: #666;
+}
+
+body.dark .no-events h3 {
+  color: #ffffff;
+}
+
+/* Calendar Section */
+body.dark .event-calendar-section {
+  background-color: #181818;
+}
+
+body.dark .annual-events {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .annual-event {
+  border-bottom: 1px solid #333;
+}
+
+body.dark .annual-event:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark .event-month {
+  background-color: #111;
+  color: #ffffff;
+}
+
+body.dark .event-info h3 {
+  color: #ffffff;
+}
+
+body.dark .event-info p {
+  color: #cccccc;
+}
+
+/* Proposal Section */
+body.dark .event-proposal-section {
+  background: linear-gradient(135deg, #111 0%, #1e1e1e 100%);
+  color: #ffffff;
+}
+
+/* Proposal Modal */
+body.dark .proposal-modal form {
+  background-color: #222;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.dark .proposal-modal h2 {
+  color: #ff7722;
+}
+
+body.dark .proposal-modal input,
+body.dark .proposal-modal textarea {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark .proposal-modal input:focus,
+body.dark .proposal-modal textarea:focus {
+  border-color: #ff7722;
+  background-color: #2a2a2a;
+}
+
+body.dark .proposal-modal button[type="button"] {
+  background-color: #444;
+  color: #ffffff;
+}
+
+body.dark .proposal-modal button[type="submit"] {
+  background-color: #ff7722;
+}
+
+/* Proposed Events Container */
+body.dark .proposed-events-container {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .proposed-events-container h3 {
+  color: #ff7722;
+}
+
+body.dark .proposed-event-item {
+  border-bottom: 1px solid #333;
+}
+
+body.dark .proposed-event-item:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark .proposed-event-title {
+  color: #ffffff;
+}
+
+body.dark .proposed-event-date,
+body.dark .proposed-event-author {
+  color: #aaaaaa;
+}
+
+body.dark .proposed-event-description {
+  color: #cccccc;
+}
+
+/* Smooth transition */
+body.dark .events-list-section,
+body.dark .event-calendar-section,
+body.dark .annual-events,
+body.dark .proposal-modal form,
+body.dark .proposed-events-container {
+  transition: all 0.3s ease-in-out;
+}

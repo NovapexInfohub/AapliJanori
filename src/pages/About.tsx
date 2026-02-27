@@ -37,6 +37,8 @@ const About = () => {
   return (
     <div className="about-page">
       <HeroSection 
+        title={t('about.hero.title')}
+        subtitle={t('about.hero.subtitle')}
         backgroundImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=compress&fit=crop&w=1200&q=80"
       />
 
@@ -46,12 +48,12 @@ const About = () => {
             <div className="village-image">
               <img 
                 src="https://i.ytimg.com/vi/s2OJzfFIQ10/maxresdefault.jpg" 
-                alt="Janori Village Scenery" 
+                alt={t('about.history.title')} 
               />
               <br></br>
               <img 
                src="https://www.memeraki.com/cdn/shop/articles/Screenshot_2023-02-01_at_3.27.33_AM_1200x1200.png?v=1675202595"
-              alt="Janori Village Scenery" 
+              alt={t('about.history.title')} 
               />
             </div>
             <div className="village-text">

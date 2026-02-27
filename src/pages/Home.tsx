@@ -1,13 +1,31 @@
 import { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Ambulance, Stethoscope, PhoneCall, Phone } from 'lucide-react';
+import { Ambulance, Stethoscope, PhoneCall, Phone, Landmark as TempleIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import EventCard from '../components/EventCard';
 import '../styles/Home.css';
 
+// Import temple images
+import templeImg1 from '../assets/temple img/img1.jpeg';
+import templeImg2 from '../assets/temple img/img2.jpeg';
+import templeImg3 from '../assets/temple img/img3.jpeg';
+import templeImg4 from '../assets/temple img/img4.jpeg';
+import templeImg5 from '../assets/temple img/img5.jpeg';
+import templeImg6 from '../assets/temple img/img6.jpeg';
+import templeImg7 from '../assets/temple img/img7.jpeg';
+import templeImg8 from '../assets/temple img/img8.jpeg';
+import templeImg9 from '../assets/temple img/img9.jpeg';
+
 const Home = () => {
   const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Temple images array
+  const templeImages = [
+    templeImg1, templeImg2, templeImg3, templeImg4, templeImg5,
+    templeImg6, templeImg7, templeImg8, templeImg9
+  ];
 
   // Memoized slides to update on language change
   const slides = useMemo(() => [
@@ -78,6 +96,17 @@ const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [slides.length]);
+
+  // Close modal when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (selectedImage && (e.target as HTMLElement).classList.contains('modal-overlay')) {
+        setSelectedImage(null);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [selectedImage]);
 
   return (
     <div className="home-page">
@@ -170,6 +199,53 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Temple Section - New Addition */}
+      <section className="temple-section">
+        <div className="container">
+          <div className="section-header">
+            <div className="temple-icon-wrapper">
+              <TempleIcon size={40} className="temple-icon" />
+            </div>
+            <h2>{t('home.templeTitle') || 'Our Gram Devata Temple'}</h2>
+            <p>{t('home.templeSubtitle') || 'Glimpses of our sacred temple and festivals'}</p>
+          </div>
+
+          <div className="temple-gallery">
+            {templeImages.map((image, index) => (
+              <div 
+                key={index} 
+                className="temple-gallery-item"
+                onClick={() => setSelectedImage(image)}
+              >
+                <img 
+                  src={image} 
+                  alt={`Temple ${index + 1}`} 
+                  className="temple-gallery-image"
+                  loading="lazy"
+                />
+                <div className="temple-gallery-overlay">
+                  <span className="view-icon">🔍</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="temple-description">
+            <p>{t('home.templeDescription') || 'The Gram Devata temple is the heart of our village, where centuries of tradition and faith come together. Daily prayers, weekly bhajans, and annual festivals bring the community together in celebration and devotion.'}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+          <div className="modal-content">
+            <button className="modal-close" onClick={() => setSelectedImage(null)}>×</button>
+            <img src={selectedImage} alt="Temple enlarged view" className="modal-image" />
+          </div>
+        </div>
+      )}
 
       {/* Emergency Services */}
       <section className="emergency-services">

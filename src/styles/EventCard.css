@@ -89,3 +89,49 @@
     font-size: 1.2rem;
   }
 }
+/* ========================================= */
+/* 🔥 DARK MODE FIX – EVENT CARDS */
+/* ========================================= */
+
+body.dark .event-card {
+  background-color: #222 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.dark .event-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark .event-title {
+  color: #ffffff !important;
+  border-bottom: 2px solid #ff7722 !important;
+}
+
+body.dark .event-detail {
+  color: #cccccc !important;
+}
+
+body.dark .event-icon {
+  color: #ff7722 !important;
+}
+
+body.dark .event-description {
+  color: #bbbbbb !important;
+}
+
+body.dark .event-btn {
+  border: 2px solid #ff7722 !important;
+  color: #ff7722 !important;
+}
+
+body.dark .event-btn:hover {
+  background-color: #ff7722 !important;
+  color: #ffffff !important;
+}
+
+/* Smooth transition */
+body.dark .event-card,
+body.dark .event-content {
+  transition: all 0.3s ease-in-out;
+}

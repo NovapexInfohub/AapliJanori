@@ -368,3 +368,141 @@
     font-size: 1.8rem;
   }
 }
+/* ========================================= */
+/* 🔥 DARK MODE SUPPORT – CONTACT PAGE */
+/* ========================================= */
+
+body.dark .contact-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .contact-info h2,
+body.dark .contact-form-container h2 {
+  color: #ffffff;
+}
+
+body.dark .contact-info p {
+  color: #cccccc;
+}
+
+body.dark .contact-text h3 {
+  color: #ffffff;
+}
+
+body.dark .contact-text p {
+  color: #bbbbbb;
+}
+
+/* Contact Form */
+body.dark .contact-form-container {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .contact-form label {
+  color: #cccccc;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background-color: #333;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: #999;
+}
+
+body.dark .contact-form input:focus,
+body.dark .contact-form textarea:focus {
+  border-color: #ff7722;
+  box-shadow: 0 0 0 3px rgba(255, 119, 34, 0.25);
+}
+
+/* Submit Messages */
+body.dark .submit-message.success {
+  background-color: #1e4620;
+  color: #9be7a6;
+  border: 1px solid #2e7d32;
+}
+
+body.dark .submit-message.error {
+  background-color: #4a1e1e;
+  color: #ff8a8a;
+  border: 1px solid #c62828;
+}
+
+/* Directions Section */
+body.dark .directions-section {
+  background-color: #181818;
+}
+
+body.dark .direction-item {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .direction-item h3 {
+  color: #ffffff;
+  border-bottom: 2px solid #333;
+}
+
+body.dark .direction-item li {
+  color: #cccccc;
+}
+
+body.dark .direction-item li:before {
+  color: #ff7722;
+}
+
+/* Map Section */
+body.dark .map-section {
+  background-color: #181818;
+}
+
+body.dark .map-placeholder {
+  background-color: #222;
+  color: #cccccc;
+}
+
+/* Direction Options */
+body.dark .direction-option {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .direction-option h4 {
+  color: #ff7722;
+}
+
+body.dark .direction-option p {
+  color: #cccccc;
+}
+
+/* Feedback Section */
+body.dark .feedback-section {
+  background: linear-gradient(135deg, #111 0%, #1e1e1e 100%);
+  color: #ffffff;
+}
+
+body.dark .feedback-content .btn-secondary {
+  background-color: #ff7722;
+  color: #ffffff;
+}
+
+body.dark .feedback-content .btn-secondary:hover {
+  background-color: #ffffff;
+  color: #ff7722;
+}
+
+/* Smooth transitions */
+body.dark .contact-section,
+body.dark .directions-section,
+body.dark .map-section,
+body.dark .direction-item,
+body.dark .contact-form-container,
+body.dark .direction-option {
+  transition: all 0.3s ease-in-out;
+}

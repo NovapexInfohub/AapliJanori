@@ -10,3 +10,50 @@
 @import './styles/Events.css';
 @import './styles/Gallery.css';
 @import './styles/Contact.css';
+
+/* ============================= */
+/* LIGHT MODE (Default) */
+/* ============================= */
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ============================= */
+/* DARK MODE */
+/* ============================= */
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Dark */
+body.dark .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark .nav-link {
+  color: #ffffff !important;
+}
+
+body.dark .brand-title {
+  color: #ffffff !important;
+}
+
+body.dark .footer {
+  background-color: #1e1e1e !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}

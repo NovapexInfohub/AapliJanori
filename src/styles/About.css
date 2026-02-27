@@ -367,3 +367,129 @@
     font-size: 1rem;
   }
 }
+/* ========================================= */
+/* 🔥 DARK MODE SUPPORT – ABOUT PAGE */
+/* ========================================= */
+
+body.dark .village-info-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .village-text h2 {
+  color: #ffffff;
+}
+
+body.dark .village-text p {
+  color: #cccccc;
+}
+
+/* Demographics Section */
+body.dark .demographics-section {
+  background-color: #181818;
+}
+
+body.dark .demographic-item {
+  background-color: #222;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.dark .demographic-item h3 {
+  color: #ffffff;
+}
+
+body.dark .demographic-item p {
+  color: #ff7722;
+}
+
+body.dark .demographic-item ul li {
+  color: #cccccc;
+  border-bottom: 1px solid #333;
+}
+
+/* Panchayat Section */
+body.dark .panchayat-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .member-card {
+  background-color: #222;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.dark .member-info h3 {
+  color: #ffffff;
+}
+
+body.dark .member-position {
+  color: #ff7722;
+}
+
+body.dark .member-category {
+  background-color: #333;
+  color: #cccccc;
+}
+
+/* Achievements Section */
+body.dark .achievements-section {
+  background-color: #181818;
+}
+
+body.dark .achievements-timeline::before {
+  background-color: #ff7722;
+}
+
+body.dark .timeline-dot {
+  background-color: #ff7722;
+}
+
+body.dark .timeline-content {
+  background-color: #222;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.dark .timeline-content h3 {
+  color: #ff7722;
+}
+
+body.dark .timeline-content h4 {
+  color: #ffffff;
+}
+
+body.dark .timeline-content p {
+  color: #cccccc;
+}
+
+/* Members Table */
+body.dark .members-table {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .members-table th {
+  background-color: #111;
+  color: #ffffff;
+}
+
+body.dark .members-table td {
+  color: #cccccc;
+  border-bottom: 1px solid #333;
+}
+
+body.dark .members-table tr:hover {
+  background-color: #2a2a2a;
+}
+
+/* Smooth transition */
+body.dark .village-info-section,
+body.dark .demographics-section,
+body.dark .panchayat-section,
+body.dark .achievements-section,
+body.dark .demographic-item,
+body.dark .member-card,
+body.dark .timeline-content,
+body.dark .members-table {
+  transition: all 0.3s ease-in-out;
+}

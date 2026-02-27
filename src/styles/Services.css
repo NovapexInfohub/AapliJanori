@@ -412,3 +412,396 @@
     font-size: 1.8rem;
   }
 }
+/* ========================================= */
+/* 🔥 DARK MODE SUPPORT – SERVICES PAGE */
+/* ========================================= */
+
+body.dark .services-list-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .services-loading {
+  color: #cccccc;
+}
+
+/* Service Process Section */
+body.dark .service-process-section {
+  background-color: #181818;
+}
+
+body.dark .step-content {
+  background-color: #222;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.dark .step-content h3 {
+  color: #ffffff;
+}
+
+body.dark .step-content p {
+  color: #cccccc;
+}
+
+body.dark .process-step::after {
+  background-color: #ff7722;
+}
+
+body.dark .step-number {
+  background-color: #ff7722;
+}
+
+/* Schemes Section */
+body.dark .schemes-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .scheme-card {
+  background-color: #222;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.dark .scheme-card h3 {
+  color: #ffffff;
+}
+
+body.dark .scheme-description {
+  color: #cccccc;
+  border-bottom: 1px solid #333;
+}
+
+body.dark .scheme-detail h4 {
+  color: #ff7722;
+}
+
+body.dark .scheme-detail p {
+  color: #bbbbbb;
+}
+
+/* Service Hours Section */
+body.dark .service-hours-section {
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  color: #ffffff;
+}
+
+body.dark .office-hours {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .note {
+  color: #cccccc;
+}
+
+/* Documentation Section */
+body.dark .documentation-section {
+  background: linear-gradient(120deg, #222 0%, #111 100%);
+  box-shadow: none;
+}
+
+body.dark .docs-list li {
+  background-color: #2a2a2a;
+  box-shadow: none;
+}
+
+body.dark .docs-list a {
+  color: #ff7722;
+}
+
+body.dark .docs-list a:hover {
+  color: #35a42a;
+}
+
+/* Buttons keep gradient but ensure text readable */
+body.dark .docs-upload-btn,
+body.dark .docs-delete-btn,
+body.dark .docs-preview-btn,
+body.dark .docs-download-btn {
+  color: #ffffff;
+}
+
+/* Smooth transition */
+body.dark .services-list-section,
+body.dark .service-process-section,
+body.dark .schemes-section,
+body.dark .service-hours-section,
+body.dark .scheme-card,
+body.dark .step-content,
+body.dark .documentation-section,
+body.dark .docs-list li {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add this to your existing Services.css file */
+
+/* Town Services Section */
+.town-services-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.town-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.town-service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.town-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon svg {
+  color: white !important;
+}
+
+.service-title h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.profession-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.service-details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.detail-item .detail-icon {
+  color: #667eea;
+  flex-shrink: 0;
+}
+
+.service-rating {
+  margin-top: 10px;
+  color: #fbbf24;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating-text {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.service-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.contact-btn, .direction-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+}
+
+.direction-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+}
+
+.direction-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+}
+
+.town-services-admin {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-service-btn {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.add-service-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.delete-service-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.delete-service-btn:hover {
+  background: #c82333;
+}
+
+/* Dark mode styles for town services */
+body.dark .town-services-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+body.dark .town-service-card {
+  background: #2a2a2a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .service-title h3 {
+  color: #ffffff;
+}
+
+body.dark .detail-item {
+  color: #cccccc;
+}
+
+body.dark .rating-text {
+  color: #aaaaaa;
+}
+
+body.dark .profession-badge {
+  background: linear-gradient(135deg, #8a6eea 0%, #9652a2 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .town-services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card-actions {
+    flex-direction: column;
+  }
+  
+  .contact-btn, .direction-btn {
+    width: 100%;
+  }
+}
+.town-services-section {
+  padding: 80px 0;
+  background: var(--section-bg, #f9f9f9);
+}
+
+.add-town-service-btn {
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  background: #138808;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.town-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.town-service-card {
+  background: var(--card-bg, #ffffff);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.town-service-card:hover {
+  transform: translateY(-5px);
+}
+
+.call-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #ff9800;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.delete-town-service-btn {
+  margin-top: 10px;
+  background: #ff4e50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

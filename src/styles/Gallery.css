@@ -212,3 +212,72 @@
     font-size: 1.8rem;
   }
 }
+/* ========================================= */
+/* 🔥 DARK MODE SUPPORT – GALLERY PAGE */
+/* ========================================= */
+
+body.dark .photo-gallery-section {
+  background-color: #1e1e1e;
+}
+
+body.dark .gallery-loading {
+  color: #cccccc;
+}
+
+/* Video Section */
+body.dark .video-gallery-section {
+  background-color: #181818;
+}
+
+body.dark .video-title {
+  color: #ffffff;
+}
+
+body.dark .video-item:hover .video-title {
+  color: #ff7722;
+}
+
+body.dark .video-thumbnail {
+  box-shadow: none;
+}
+
+body.dark .video-duration {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+}
+
+/* CTA Section */
+body.dark .gallery-cta-section {
+  background: linear-gradient(135deg, #111 0%, #1e1e1e 100%);
+  color: #ffffff;
+}
+
+body.dark .gallery-cta-content .btn-primary {
+  background-color: #ff7722;
+  color: #ffffff;
+}
+
+body.dark .gallery-cta-content .btn-primary:hover {
+  background-color: #ffffff;
+  color: #ff7722;
+}
+
+/* Image Grid */
+body.dark .gallery-image-wrapper {
+  background-color: #222;
+  box-shadow: none;
+}
+
+body.dark .gallery-image-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+}
+
+/* Smooth transition */
+body.dark .photo-gallery-section,
+body.dark .video-gallery-section,
+body.dark .gallery-cta-section,
+body.dark .gallery-image-wrapper,
+body.dark .video-thumbnail {
+  transition: all 0.3s ease-in-out;
+}

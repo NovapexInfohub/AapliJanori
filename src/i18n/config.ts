@@ -4,17 +4,18 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      nav: {
-        brandTitle: 'Apli Janori',
-        home: 'Home',
-        about: 'About',
-        services: 'Services',
-        events: 'Events',
-        gallery: 'Gallery',
-        contact: 'Contact',
-        adminLogin: 'Admin Login',
-        logout: 'Logout'
-      },
+     nav: {
+  brandTitle: 'Apli Janori',
+  panchayatText: 'Gram Panchayat',
+  home: 'Home',
+  about: 'About',
+  services: 'Services',
+  events: 'Events',
+  gallery: 'Gallery',
+  contact: 'Contact',
+  adminLogin: 'Admin Login',
+  logout: 'Logout'
+},
       home: {
         slider1Title: "Welcome to Janori",
         slider1Subtitle: "A model village committed to sustainable development and prosperity",
@@ -50,84 +51,93 @@ const resources = {
           { name: 'Mr. Suresh Ramchandra Chitode', position: 'Employee', category: '-' },
           { name: 'Mr. Ambadas Ukharda Dange', position: 'Computer Operator', category: '-' }
         ],
+        templeTitle: "Divine Temples of Janori",
+        templeSubtitle: "Explore the sacred temples and timeless spiritual traditions of our village",
+        templeDescription: "The divine temples of Janori reflect centuries of devotion, culture, and architectural beauty. These sacred shrines serve as spiritual landmarks where daily prayers, bhajans, and grand festivals unite the community in faith and celebration.",
         emergencyTitle: "Emergency Services",
+        emergencySubtitle: "24/7 helpline numbers for emergency situations",
         ambulance: "Ambulance Service",
         medical: "Medical Emergency",
         police: "Police Station",
         fire: "Fire Emergency",
         eventsTitle: "Upcoming Events",
+        eventsSubtitle: "Stay updated with village activities and programs",
         viewAllEvents: "View All Events",
         ctaTitle: "Have Questions or Suggestions?",
         ctaText: "We're here to serve you. Reach out to us with your queries or feedback.",
         contactBtn: "Contact Us"
       },
       about: {
-        history: {
-          title: "Village History",
-          p1: "A Sacred and Historic Religious Place in Vidarbha. Janori is a village located in the Buldhana district of Maharashtra, about 8 to 10 kilometers from Shegaon. The village is well known across Vidarbha for its ancient temples, traditional architectural style, religious customs, and spiritually charged atmosphere.",
-          p2: "1. Historical Background: The temples of Janori were built in the 17th century. Since then, the village has acquired the status of an important religious pilgrimage center. From ancient times, saints, sages, and ascetics have resided in this village. Some of the temples in the village reflect architectural styles from the Peshwa period.",
-          p3: "2. Major Religious Places: Lord Narasimha Temple: This is the most prominent religious center of the village. The temple's spire, sanctum (garbhagriha), and hall (mandap) display excellent stone craftsmanship. The temple area has dedicated spaces for meditation and religious discourses. Narasimha Jayanti is celebrated with great devotion, during which thousands of devotees visit for darshan. Mahadev Temple: Located in the central part of the village, this temple hosts an all-night grand worship and vigil on the occasion of Maha Shivaratri. Mahasiddha Bhagwan Temple: This temple has a history of secret spiritual practices and tantric worship. Devotees visit here seeking good health and fulfillment of wishes. Temples of Lord Rama, Lakshmana, Sita, and Hanuman: Festivals such as Ram Navami and Hanuman Jayanti are celebrated here with great enthusiasm.",
-          p4: "3. Information for Tourists and Devotees: The village is easily accessible from Shegaon bus stand and railway station. Facilities such as pilgrim accommodation, dining arrangements, drinking water, and clean sanitation are available in the village. Local guides are also available for visitors and devotees. The nearby scenic surroundings, green farmlands, and peaceful environment further attract tourists."
-        },
-        demographics: {
-          title: "Village Demographics",
-          subtitle: "Key facts about the people and land",
-          population: {
-            title: "Population",
-            total: "Approx. 5,000 residents",
-            male: "2,600 Males",
-            female: "2,400 Females",
-            children: "1,200 Children",
-            youth: "1,500 Youth",
-            adults: "2,000 Adults",
-            seniors: "300 Seniors"
-          },
-          education: {
-            title: "Education",
-            rate: "Literacy rate: 85%",
-            primary: "Primary School: 500 students",
-            secondary: "Secondary School: 300 students",
-            graduates: "150 Graduates",
-            higher: "50 Higher Education students",
-            technical: "30 pursuing Technical Education"
-          },
-          geography: {
-            title: "Geography",
-            area: "Total Area: 10 sq. km",
-            agricultural: "7 sq. km Agricultural land",
-            residential: "2 sq. km Residential",
-            forest: "0.5 sq. km Forest",
-            water: "0.5 sq. km Water bodies",
-            distance: "12 km from Shegaon"
-          }
-        },
-        achievements: {
-          title: "Village Achievements",
-          subtitle: "Recognitions and milestones that make us proud",
-          items: {
-            "2023": {
-              title: "State-level Clean Village Award",
-              description: "Recognized for exemplary waste management and sanitation practices."
-            },
-            "2022": {
-              title: "100% Digital Literacy",
-              description: "Achieved digital literacy for all residents between the ages of 14-60 years."
-            },
-            "2021": {
-              title: "Water Conservation Model Village",
-              description: "Implemented innovative water harvesting and conservation techniques."
-            },
-            "2020": {
-              title: "Open Defecation Free Status",
-              description: "Successfully achieved and maintained ODF status with 100% toilet coverage."
-            },
-            "2018": {
-              title: "Solar Energy Adoption",
-              description: "First village in the district to adopt solar energy for street lighting and public facilities."
-            }
-          }
-        }
+  hero: {
+    title: "About Janori Village",
+    subtitle: "Discover the rich heritage, culture, and progress of our beloved village"
+  },
+  history: {
+    title: "Village History",
+    p1: "A Sacred and Historic Religious Place in Vidarbha. Janori is a village located in the Buldhana district of Maharashtra, about 8 to 10 kilometers from Shegaon. The village is well known across Vidarbha for its ancient temples, traditional architectural style, religious customs, and spiritually charged atmosphere.",
+    p2: "1. Historical Background: The temples of Janori were built in the 17th century. Since then, the village has acquired the status of an important religious pilgrimage center. From ancient times, saints, sages, and ascetics have resided in this village. Some of the temples in the village reflect architectural styles from the Peshwa period.",
+    p3: "2. Major Religious Places: Lord Narasimha Temple: This is the most prominent religious center of the village. The temple's spire, sanctum (garbhagriha), and hall (mandap) display excellent stone craftsmanship. The temple area has dedicated spaces for meditation and religious discourses. Narasimha Jayanti is celebrated with great devotion, during which thousands of devotees visit for darshan. Mahadev Temple: Located in the central part of the village, this temple hosts an all-night grand worship and vigil on the occasion of Maha Shivaratri. Mahasiddha Bhagwan Temple: This temple has a history of secret spiritual practices and tantric worship. Devotees visit here seeking good health and fulfillment of wishes. Temples of Lord Rama, Lakshmana, Sita, and Hanuman: Festivals such as Ram Navami and Hanuman Jayanti are celebrated here with great enthusiasm.",
+    p4: "3. Information for Tourists and Devotees: The village is easily accessible from Shegaon bus stand and railway station. Facilities such as pilgrim accommodation, dining arrangements, drinking water, and clean sanitation are available in the village. Local guides are also available for visitors and devotees. The nearby scenic surroundings, green farmlands, and peaceful environment further attract tourists."
+  },
+  demographics: {
+    title: "Village Demographics",
+    subtitle: "Key facts about the people and land",
+    population: {
+      title: "Population",
+      total: "Approx. 5,000 residents",
+      male: "2,600 Males",
+      female: "2,400 Females",
+      children: "1,200 Children",
+      youth: "1,500 Youth",
+      adults: "2,000 Adults",
+      seniors: "300 Seniors"
+    },
+    education: {
+      title: "Education",
+      rate: "Literacy rate: 85%",
+      primary: "Primary School: 500 students",
+      secondary: "Secondary School: 300 students",
+      graduates: "150 Graduates",
+      higher: "50 Higher Education students",
+      technical: "30 pursuing Technical Education"
+    },
+    geography: {
+      title: "Geography",
+      area: "Total Area: 10 sq. km",
+      agricultural: "7 sq. km Agricultural land",
+      residential: "2 sq. km Residential",
+      forest: "0.5 sq. km Forest",
+      water: "0.5 sq. km Water bodies",
+      distance: "12 km from Shegaon"
+    }
+  },
+  achievements: {
+    title: "Village Achievements",
+    subtitle: "Recognitions and milestones that make us proud",
+    items: {
+      "2023": {
+        title: "State-level Clean Village Award",
+        description: "Recognized for exemplary waste management and sanitation practices."
       },
+      "2022": {
+        title: "100% Digital Literacy",
+        description: "Achieved digital literacy for all residents between the ages of 14-60 years."
+      },
+      "2021": {
+        title: "Water Conservation Model Village",
+        description: "Implemented innovative water harvesting and conservation techniques."
+      },
+      "2020": {
+        title: "Open Defecation Free Status",
+        description: "Successfully achieved and maintained ODF status with 100% toilet coverage."
+      },
+      "2018": {
+        title: "Solar Energy Adoption",
+        description: "First village in the district to adopt solar energy for street lighting and public facilities."
+      }
+    }
+  }
+},
       services: {
         title: "Our Services",
         subtitle: "Comprehensive services and schemes for the welfare of our residents",
@@ -398,22 +408,82 @@ const resources = {
         bottom: {
           rights: "All Rights Reserved"
         }
+      },
+      gallery: {
+        title: "Our Gallery",
+        subtitle: "Capturing the essence and spirit of Janori",
+        photoGalleryTitle: "Photo Gallery",
+        photoGallerySubtitle: "A visual journey through our village life and activities",
+        videoGalleryTitle: "Video Gallery",
+        videoGallerySubtitle: "Watch videos showcasing village events and achievements",
+        ctaTitle: "Share Your Village Moments",
+        ctaDescription: "Do you have photos or videos of Janori village events or beautiful locations? Share them with us to be featured in our gallery.",
+        submitMedia: "Submit Media",
+        uploading: "Uploading...",
+        uploadSuccess: "Media uploaded successfully!",
+        userUploadSuccess: "Your image has been uploaded successfully and is pending admin approval.",
+        images: {
+          "1": {
+            alt: "Village Landscape",
+            category: "village"
+          },
+          "2": {
+            alt: "Farming Activities",
+            category: "agriculture"
+          },
+          "3": {
+            alt: "Local Festival Celebration",
+            category: "culture"
+          },
+          "4": {
+            alt: "Community Health Camp",
+            category: "health"
+          },
+          "5": {
+            alt: "Agricultural Training",
+            category: "agriculture"
+          },
+          "6": {
+            alt: "Village Development",
+            category: "development"
+          },
+          "7": {
+            alt: "Education",
+            category: "education"
+          },
+          "8": {
+            alt: "Infrastructure",
+            category: "infrastructure"
+          }
+        },
+        videos: {
+          "1": {
+            title: "Village Development Project"
+          },
+          "2": {
+            title: "Republic Day Celebration 2025"
+          },
+          "3": {
+            title: "Gram Sabha Meeting Highlights"
+          }
+        }
       }
     }
   },
   hi: {
     translation: {
-      nav: {
-        brandTitle: 'आपली जानोरी',
-        home: 'मुख्यपृष्ठ',
-        about: 'हमारे बारे में',
-        services: 'सेवाएं',
-        events: 'कार्यक्रम',
-        gallery: 'गैलरी',
-        contact: 'संपर्क',
-        adminLogin: 'एडमिन लॉगिन',
-        logout: 'लॉगआउट'
-      },
+       nav: {
+  brandTitle: 'आपली जानोरी',
+  panchayatText: 'ग्राम पंचायत',
+  home: 'मुख्यपृष्ठ',
+  about: 'हमारे बारे में',
+  services: 'सेवाएं',
+  events: 'कार्यक्रम',
+  gallery: 'गैलरी',
+  contact: 'संपर्क',
+  adminLogin: 'एडमिन लॉगिन',
+  logout: 'लॉगआउट'
+},
       home: {
         slider1Title: "जानोरी में आपका स्वागत है",
         slider1Subtitle: "सतत विकास और समृद्धि के लिए प्रतिबद्ध एक आदर्श गांव",
@@ -449,84 +519,93 @@ const resources = {
           { name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: '-' },
           { name: 'श्री. अंबादास उखर्डा डांगे', position: 'कंप्यूटर ऑपरेटर', category: '-' }
         ],
+        templeTitle: "जानोरी के दिव्य मंदिर",
+        templeSubtitle: "हमारे गाँव के पवित्र मंदिरों और शाश्वत आध्यात्मिक परंपराओं का अन्वेषण करें",
+        templeDescription: "जानोरी के दिव्य मंदिर सदियों पुरानी भक्ति, संस्कृति और स्थापत्य कला का प्रतीक हैं। ये पवित्र स्थल दैनिक पूजा, भजन और भव्य त्योहारों के माध्यम से पूरे समुदाय को आस्था और उत्सव में एकजुट करते हैं।",
         emergencyTitle: "आपातकालीन सेवाएं",
+        emergencySubtitle: "आपात स्थिति के लिए 24/7 हेल्पलाइन नंबर",
         ambulance: "एम्बुलेंस सेवा",
         medical: "चिकित्सा आपातकाल",
         police: "पुलिस स्टेशन",
         fire: "फायर ब्रिगेड",
         eventsTitle: "आगामी कार्यक्रम",
+        eventsSubtitle: "ग्राम गतिविधियों और कार्यक्रमों से अपडेट रहें",
         viewAllEvents: "सभी कार्यक्रम देखें",
         ctaTitle: "कोई प्रश्न या सुझाव है?",
         ctaText: "हम आपकी सेवा के लिए यहाँ हैं। अपने प्रश्नों या प्रतिक्रिया के साथ हमसे संपर्क करें।",
         contactBtn: "संपर्क करें"
       },
       about: {
-        history: {
-          title: "गाँव का इतिहास",
-          p1: "विदर्भ में एक पवित्र और ऐतिहासिक धार्मिक स्थल। जानोरी महाराष्ट्र के बुलढाणा जिले में स्थित एक गाँव है, जो शेगाँव से लगभग 8 से 10 किलोमीटर दूर है। यह गाँव अपने प्राचीन मंदिरों, पारंपरिक वास्तुकला शैली, धार्मिक रीति-रिवाजों और आध्यात्मिक रूप से समृद्ध वातावरण के लिए विदर्भ भर में प्रसिद्ध है।",
-          p2: "1. ऐतिहासिक पृष्ठभूमि: जानोरी के मंदिर 17वीं शताब्दी में बनाए गए थे। तब से, इस गाँव ने एक महत्वपूर्ण धार्मिक तीर्थ केंद्र का दर्जा प्राप्त कर लिया है। प्राचीन काल से, संत, ऋषि और तपस्वी इस गाँव में निवास करते रहे हैं। गाँव के कुछ मंदिर पेशवा काल की वास्तुकला शैली को दर्शाते हैं।",
-          p3: "2. प्रमुख धार्मिक स्थल: भगवान नरसिंह मंदिर: यह गाँव का सबसे प्रमुख धार्मिक केंद्र है। मंदिर का शिखर, गर्भगृह और मंडप उत्कृष्ट पत्थर शिल्प कौशल का प्रदर्शन करते हैं। मंदिर परिसर में ध्यान और धार्मिक प्रवचनों के लिए समर्पित स्थान हैं। नरसिंह जयंती बड़ी भक्ति के साथ मनाई जाती है, जिसके दौरान हजारों भक्त दर्शन के लिए आते हैं। महादेव मंदिर: गाँव के मध्य भाग में स्थित, यह मंदिर महाशिवरात्रि के अवसर पर रातभर भव्य पूजा और जागरण का आयोजन करता है। महासिद्ध भगवान मंदिर: इस मंदिर का गुप्त साधना और तांत्रिक पूजा का इतिहास रहा है। भक्त अच्छे स्वास्थ्य और मनोकामनाओं की पूर्ति के लिए यहाँ आते हैं। भगवान राम, लक्ष्मण, सीता और हनुमान मंदिर: राम नवमी और हनुमान जयंती जैसे त्योहार यहाँ बड़े उत्साह के साथ मनाए जाते हैं।",
-          p4: "3. पर्यटकों और भक्तों के लिए जानकारी: गाँव शेगाँव बस स्टैंड और रेलवे स्टेशन से आसानी से पहुँचा जा सकता है। गाँव में तीर्थयात्री आवास, भोजन व्यवस्था, पेयजल और स्वच्छ स्वच्छता जैसी सुविधाएँ उपलब्ध हैं। आगंतुकों और भक्तों के लिए स्थानीय गाइड भी उपलब्ध हैं। आस-पास के सुंदर परिदृश्य, हरे-भरे खेत और शांत वातावरण पर्यटकों को और आकर्षित करते हैं।"
-        },
-        demographics: {
-          title: "गाँव की जनसांख्यिकी",
-          subtitle: "लोगों और भूमि के बारे में महत्वपूर्ण तथ्य",
-          population: {
-            title: "जनसंख्या",
-            total: "लगभग 5,000 निवासी",
-            male: "2,600 पुरुष",
-            female: "2,400 महिलाएं",
-            children: "1,200 बच्चे",
-            youth: "1,500 युवा",
-            adults: "2,000 वयस्क",
-            seniors: "300 वरिष्ठ नागरिक"
-          },
-          education: {
-            title: "शिक्षा",
-            rate: "साक्षरता दर: 85%",
-            primary: "प्राथमिक विद्यालय: 500 छात्र",
-            secondary: "माध्यमिक विद्यालय: 300 छात्र",
-            graduates: "150 स्नातक",
-            higher: "50 उच्च शिक्षा छात्र",
-            technical: "30 तकनीकी शिक्षा ले रहे हैं"
-          },
-          geography: {
-            title: "भूगोल",
-            area: "कुल क्षेत्रफल: 10 वर्ग किमी",
-            agricultural: "7 वर्ग किमी कृषि भूमि",
-            residential: "2 वर्ग किमी आवासीय",
-            forest: "0.5 वर्ग किमी वन",
-            water: "0.5 वर्ग किमी जल निकाय",
-            distance: "शेगाँव से 12 किमी"
-          }
-        },
-        achievements: {
-          title: "गाँव की उपलब्धियाँ",
-          subtitle: "मान्यताएँ और मील के पत्थर जो हमें गौरवान्वित करते हैं",
-          items: {
-            "2023": {
-              title: "राज्य स्तरीय स्वच्छ गाँव पुरस्कार",
-              description: "अनुकरणीय अपशिष्ट प्रबंधन और स्वच्छता प्रथाओं के लिए मान्यता प्राप्त।"
-            },
-            "2022": {
-              title: "100% डिजिटल साक्षरता",
-              description: "14-60 वर्ष की आयु के सभी निवासियों के लिए डिजिटल साक्षरता प्राप्त की।"
-            },
-            "2021": {
-              title: "जल संरक्षण मॉडल गाँव",
-              description: "नवीन जल संचयन और संरक्षण तकनीकों को लागू किया।"
-            },
-            "2020": {
-              title: "खुले में शौच मुक्त स्थिति",
-              description: "100% शौचालय कवरेज के साथ ODF स्थिति सफलतापूर्वक प्राप्त और बनाए रखी।"
-            },
-            "2018": {
-              title: "सौर ऊर्जा अपनाना",
-              description: "सड़क प्रकाश व्यवस्था और सार्वजनिक सुविधाओं के लिए सौर ऊर्जा अपनाने वाला जिले का पहला गाँव।"
-            }
-          }
-        }
+  hero: {
+    title: "जानोरी गाँव के बारे में",
+    subtitle: "हमारे प्यारे गाँव की समृद्ध विरासत, संस्कृति और प्रगति की खोज करें"
+  },
+  history: {
+    title: "गाँव का इतिहास",
+    p1: "विदर्भ में एक पवित्र और ऐतिहासिक धार्मिक स्थल। जानोरी महाराष्ट्र के बुलढाणा जिले में स्थित एक गाँव है, जो शेगाँव से लगभग 8 से 10 किलोमीटर दूर है। यह गाँव अपने प्राचीन मंदिरों, पारंपरिक वास्तुकला शैली, धार्मिक रीति-रिवाजों और आध्यात्मिक रूप से समृद्ध वातावरण के लिए विदर्भ भर में प्रसिद्ध है।",
+    p2: "1. ऐतिहासिक पृष्ठभूमि: जानोरी के मंदिर 17वीं शताब्दी में बनाए गए थे। तब से, इस गाँव ने एक महत्वपूर्ण धार्मिक तीर्थ केंद्र का दर्जा प्राप्त कर लिया है। प्राचीन काल से, संत, ऋषि और तपस्वी इस गाँव में निवास करते रहे हैं। गाँव के कुछ मंदिर पेशवा काल की वास्तुकला शैली को दर्शाते हैं।",
+    p3: "2. प्रमुख धार्मिक स्थल: भगवान नरसिंह मंदिर: यह गाँव का सबसे प्रमुख धार्मिक केंद्र है। मंदिर का शिखर, गर्भगृह और मंडप उत्कृष्ट पत्थर शिल्प कौशल का प्रदर्शन करते हैं। मंदिर परिसर में ध्यान और धार्मिक प्रवचनों के लिए समर्पित स्थान हैं। नरसिंह जयंती बड़ी भक्ति के साथ मनाई जाती है, जिसके दौरान हजारों भक्त दर्शन के लिए आते हैं। महादेव मंदिर: गाँव के मध्य भाग में स्थित, यह मंदिर महाशिवरात्रि के अवसर पर रातभर भव्य पूजा और जागरण का आयोजन करता है। महासिद्ध भगवान मंदिर: इस मंदिर का गुप्त साधना और तांत्रिक पूजा का इतिहास रहा है। भक्त अच्छे स्वास्थ्य और मनोकामनाओं की पूर्ति के लिए यहाँ आते हैं। भगवान राम, लक्ष्मण, सीता और हनुमान मंदिर: राम नवमी और हनुमान जयंती जैसे त्योहार यहाँ बड़े उत्साह के साथ मनाए जाते हैं।",
+    p4: "3. पर्यटकों और भक्तों के लिए जानकारी: गाँव शेगाँव बस स्टैंड और रेलवे स्टेशन से आसानी से पहुँचा जा सकता है। गाँव में तीर्थयात्री आवास, भोजन व्यवस्था, पेयजल और स्वच्छ स्वच्छता जैसी सुविधाएँ उपलब्ध हैं। आगंतुकों और भक्तों के लिए स्थानीय गाइड भी उपलब्ध हैं। आस-पास के सुंदर परिदृश्य, हरे-भरे खेत और शांत वातावरण पर्यटकों को और आकर्षित करते हैं।"
+  },
+  demographics: {
+    title: "गाँव की जनसांख्यिकी",
+    subtitle: "लोगों और भूमि के बारे में महत्वपूर्ण तथ्य",
+    population: {
+      title: "जनसंख्या",
+      total: "लगभग 5,000 निवासी",
+      male: "2,600 पुरुष",
+      female: "2,400 महिलाएं",
+      children: "1,200 बच्चे",
+      youth: "1,500 युवा",
+      adults: "2,000 वयस्क",
+      seniors: "300 वरिष्ठ नागरिक"
+    },
+    education: {
+      title: "शिक्षा",
+      rate: "साक्षरता दर: 85%",
+      primary: "प्राथमिक विद्यालय: 500 छात्र",
+      secondary: "माध्यमिक विद्यालय: 300 छात्र",
+      graduates: "150 स्नातक",
+      higher: "50 उच्च शिक्षा छात्र",
+      technical: "30 तकनीकी शिक्षा ले रहे हैं"
+    },
+    geography: {
+      title: "भूगोल",
+      area: "कुल क्षेत्रफल: 10 वर्ग किमी",
+      agricultural: "7 वर्ग किमी कृषि भूमि",
+      residential: "2 वर्ग किमी आवासीय",
+      forest: "0.5 वर्ग किमी वन",
+      water: "0.5 वर्ग किमी जल निकाय",
+      distance: "शेगाँव से 12 किमी"
+    }
+  },
+  achievements: {
+    title: "गाँव की उपलब्धियाँ",
+    subtitle: "मान्यताएँ और मील के पत्थर जो हमें गौरवान्वित करते हैं",
+    items: {
+      "2023": {
+        title: "राज्य स्तरीय स्वच्छ गाँव पुरस्कार",
+        description: "अनुकरणीय अपशिष्ट प्रबंधन और स्वच्छता प्रथाओं के लिए मान्यता प्राप्त।"
       },
+      "2022": {
+        title: "100% डिजिटल साक्षरता",
+        description: "14-60 वर्ष की आयु के सभी निवासियों के लिए डिजिटल साक्षरता प्राप्त की।"
+      },
+      "2021": {
+        title: "जल संरक्षण मॉडल गाँव",
+        description: "नवीन जल संचयन और संरक्षण तकनीकों को लागू किया।"
+      },
+      "2020": {
+        title: "खुले में शौच मुक्त स्थिति",
+        description: "100% शौचालय कवरेज के साथ ODF स्थिति सफलतापूर्वक प्राप्त और बनाए रखी।"
+      },
+      "2018": {
+        title: "सौर ऊर्जा अपनाना",
+        description: "सड़क प्रकाश व्यवस्था और सार्वजनिक सुविधाओं के लिए सौर ऊर्जा अपनाने वाला जिले का पहला गाँव।"
+      }
+    }
+  }
+},
       services: {
         title: "हमारी सेवाएं",
         subtitle: "हमारे निवासियों के कल्याण के लिए व्यापक सेवाएं और योजनाएं",
@@ -797,22 +876,82 @@ const resources = {
         bottom: {
           rights: "सर्वाधिकार सुरक्षित"
         }
+      },
+      gallery: {
+        title: "हमारी गैलरी",
+        subtitle: "जानोरी की भावना और सार को कैद करते हुए",
+        photoGalleryTitle: "फोटो गैलरी",
+        photoGallerySubtitle: "हमारे गाँव के जीवन और गतिविधियों के माध्यम से एक दृश्य यात्रा",
+        videoGalleryTitle: "वीडियो गैलरी",
+        videoGallerySubtitle: "गाँव के कार्यक्रमों और उपलब्धियों को दर्शाने वाले वीडियो देखें",
+        ctaTitle: "अपने गाँव के पल साझा करें",
+        ctaDescription: "क्या आपके पास जानोरी गाँव के कार्यक्रमों या खूबसूरत स्थानों की तस्वीरें या वीडियो हैं? उन्हें हमारे साथ साझा करें ताकि उन्हें हमारी गैलरी में शामिल किया जा सके।",
+        submitMedia: "मीडिया सबमिट करें",
+        uploading: "अपलोड हो रहा है...",
+        uploadSuccess: "मीडिया सफलतापूर्वक अपलोड हुआ!",
+        userUploadSuccess: "आपकी छवि सफलतापूर्वक अपलोड हो गई है और व्यवस्थापक की स्वीकृति की प्रतीक्षा कर रही है।",
+        images: {
+          "1": {
+            alt: "गाँव का परिदृश्य",
+            category: "village"
+          },
+          "2": {
+            alt: "कृषि गतिविधियाँ",
+            category: "agriculture"
+          },
+          "3": {
+            alt: "स्थानीय त्योहार उत्सव",
+            category: "culture"
+          },
+          "4": {
+            alt: "सामुदायिक स्वास्थ्य शिविर",
+            category: "health"
+          },
+          "5": {
+            alt: "कृषि प्रशिक्षण",
+            category: "agriculture"
+          },
+          "6": {
+            alt: "गाँव का विकास",
+            category: "development"
+          },
+          "7": {
+            alt: "शिक्षा",
+            category: "education"
+          },
+          "8": {
+            alt: "बुनियादी ढांचा",
+            category: "infrastructure"
+          }
+        },
+        videos: {
+          "1": {
+            title: "ग्राम विकास परियोजना"
+          },
+          "2": {
+            title: "गणतंत्र दिवस समारोह 2025"
+          },
+          "3": {
+            title: "ग्राम सभा बैठक के मुख्य अंश"
+          }
+        }
       }
     }
   },
   mr: {
     translation: {
-      nav: {
-        brandTitle: 'आपली जानोरी',
-        home: 'मुख्यपृष्ठ',
-        about: 'आमच्याबद्दल',
-        services: 'सेवा',
-        events: 'कार्यक्रम',
-        gallery: 'गॅलरी',
-        contact: 'संपर्क',
-        adminLogin: 'ॲडमिन लॉगिन',
-        logout: 'लॉगआउट'
-      },
+     nav: {
+  brandTitle: 'आपली जानोरी',
+  panchayatText: 'ग्रामपंचायत',
+  home: 'मुख्यपृष्ठ',
+  about: 'आमच्याबद्दल',
+  services: 'सेवा',
+  events: 'कार्यक्रम',
+  gallery: 'गॅलरी',
+  contact: 'संपर्क',
+  adminLogin: 'ॲडमिन लॉगिन',
+  logout: 'लॉगआउट'
+},
       home: {
         slider1Title: "जानोरीत आपले स्वागत आहे",
         slider1Subtitle: "शाश्वत विकास आणि समृद्धीसाठी वचनबद्ध एक आदर्श गाव",
@@ -848,84 +987,93 @@ const resources = {
           { name: 'श्री. सुरेश रामचंद्र चितोडे', position: 'कर्मचारी', category: '-' },
           { name: 'श्री. अंबादास उखर्डा डांगे', position: 'संगणक परीचालक', category: '-' }
         ],
+        templeTitle: "जानोरीतील दिव्य मंदिरे",
+        templeSubtitle: "आमच्या गावातील पवित्र मंदिरे आणि शाश्वत आध्यात्मिक परंपरांचा अनुभव घ्या",
+        templeDescription: "जानोरीतील दिव्य मंदिरे शतकानुशतकांची भक्ती, संस्कृती आणि प्राचीन वास्तुकलेचे प्रतीक आहेत. ही पवित्र स्थळे दैनंदिन पूजा, भजन आणि भव्य सणांद्वारे संपूर्ण ग्रामस्थांना श्रद्धा आणि उत्सवात एकत्र आणतात.",
         emergencyTitle: "आपत्कालीन सेवा",
+        emergencySubtitle: "आपत्कालीन परिस्थितीसाठी २४/७ हेल्पलाइन क्रमांक",
         ambulance: "ॲम्ब्युलन्स सेवा",
         medical: "वैद्यकीय आपत्काल",
         police: "पोलीस स्टेशन",
         fire: "अग्निशमन सेवा",
         eventsTitle: "आगामी कार्यक्रम",
+        eventsSubtitle: "ग्रामीण क्रियाकलाप आणि कार्यक्रमांसह अद्ययावत रहा",
         viewAllEvents: "सर्व कार्यक्रम पहा",
         ctaTitle: "काही प्रश्न किंवा सूचना आहेत का?",
         ctaText: "आम्ही तुमच्या सेवेसाठी तत्पर आहोत. आपल्या शंका किंवा अभिप्रायासाठी संपर्क साधा.",
         contactBtn: "संपर्क करा"
       },
       about: {
-        history: {
-          title: "गावाचा इतिहास",
-          p1: "विदर्भातील एक पवित्र आणि ऐतिहासिक धार्मिक स्थळ. जानोरी हे महाराष्ट्रातील बुलढाणा जिल्ह्यातील एक गाव आहे, जे शेगावपासून सुमारे ८ ते १० किलोमीटर अंतरावर आहे. हे गाव त्याच्या प्राचीन मंदिरांसाठी, पारंपारिक स्थापत्यशैलीसाठी, धार्मिक रीतीरिवाजांसाठी आणि आध्यात्मिक दृष्ट्या समृद्ध वातावरणासाठी विदर्भभर प्रसिद्ध आहे.",
-          p2: "१. ऐतिहासिक पार्श्वभूमी: जानोरीची मंदिरे १७व्या शतकात बांधली गेली. तेव्हापासून, या गावाने एक महत्त्वाचे धार्मिक तीर्थक्षेत्राचा दर्जा प्राप्त केला आहे. प्राचीन काळापासून, संत, ऋषी आणि तपस्वी या गावात राहत आले आहेत. गावातील काही मंदिरे पेशवे काळातील स्थापत्यशैली दर्शवितात.",
-          p3: "२. प्रमुख धार्मिक स्थळे: भगवान नरसिंह मंदिर: हे गावातील सर्वात प्रमुख धार्मिक केंद्र आहे. मंदिराचा शिखर, गर्भगृह आणि मंडप उत्कृष्ट दगडी शिल्पकलेचे प्रदर्शन करतात. मंदिर परिसरात ध्यान आणि धार्मिक प्रवचनांसाठी समर्पित जागा आहेत. नरसिंह जयंती मोठ्या भक्तिभावाने साजरी केली जाते, ज्या दरम्यान हजारो भाविक दर्शनासाठी येतात. महादेव मंदिर: गावाच्या मध्यभागी स्थित, हे मंदिर महाशिवरात्रीच्या निमित्ताने रात्रभर भव्य पूजा आणि जागरण आयोजित करते. महासिद्ध भगवान मंदिर: या मंदिराचा गुप्त साधना आणि तांत्रिक पूजेचा इतिहास आहे. भक्त चांगल्या आरोग्यासाठी आणि मनोकामना पूर्ण होण्यासाठी येथे येतात. भगवान राम, लक्ष्मण, सीता आणि हनुमान मंदिरे: राम नवमी आणि हनुमान जयंती सारखे सण येथे मोठ्या उत्साहात साजरे केले जातात.",
-          p4: "३. पर्यटक आणि भाविकांसाठी माहिती: गाव शेगाव बस स्टँड आणि रेल्वे स्थानकापासून सहज उपलब्ध आहे. गावात तीर्थयात्री निवास, भोजन व्यवस्था, पिण्याचे पाणी आणि स्वच्छ स्वच्छता सुविधा उपलब्ध आहेत. अभ्यागत आणि भाविकांसाठी स्थानिक मार्गदर्शकही उपलब्ध आहेत. जवळचे निसर्गरम्य दृश्ये, हिरवीगार शेते आणि शांत वातावरण पर्यटकांना अधिक आकर्षित करते."
-        },
-        demographics: {
-          title: "गावाची लोकसंख्या",
-          subtitle: "लोक आणि जमिनीबद्दल महत्त्वाची माहिती",
-          population: {
-            title: "लोकसंख्या",
-            total: "अंदाजे ५,००० रहिवासी",
-            male: "२,६०० पुरुष",
-            female: "२,४०० महिला",
-            children: "१,२०० मुले",
-            youth: "१,५०० युवक",
-            adults: "२,००० प्रौढ",
-            seniors: "३०० ज्येष्ठ नागरिक"
-          },
-          education: {
-            title: "शिक्षण",
-            rate: "साक्षरता दर: ८५%",
-            primary: "प्राथमिक शाळा: ५०० विद्यार्थी",
-            secondary: "माध्यमिक शाळा: ३०० विद्यार्थी",
-            graduates: "१५० पदवीधर",
-            higher: "५० उच्च शिक्षण घेतलेले विद्यार्थी",
-            technical: "३० तांत्रिक शिक्षण घेत आहेत"
-          },
-          geography: {
-            title: "भूगोल",
-            area: "एकूण क्षेत्रफळ: १० चौ. किमी",
-            agricultural: "७ चौ. किमी शेतीयोग्य जमीन",
-            residential: "२ चौ. किमी निवासी",
-            forest: "०.५ चौ. किमी जंगल",
-            water: "०.५ चौ. किमी जलस्रोत",
-            distance: "शेगावपासून १२ किमी"
-          }
-        },
-        achievements: {
-          title: "गावाची उपलब्धी",
-          subtitle: "मान्यता आणि महत्त्वाचे टप्पे ज्याचा आम्हाला अभिमान आहे",
-          items: {
-            "2023": {
-              title: "राज्यस्तरीय स्वच्छ गाव पुरस्कार",
-              description: "उत्कृष्ट कचरा व्यवस्थापन आणि स्वच्छता पद्धतींसाठी मान्यता."
-            },
-            "2022": {
-              title: "१००% डिजिटल साक्षरता",
-              description: "१४-६० वयोगटातील सर्व रहिवाशांसाठी डिजिटल साक्षरता प्राप्त केली."
-            },
-            "2021": {
-              title: "जलसंधारण आदर्श गाव",
-              description: "नाविन्यपूर्ण जलसंधारण आणि संवर्धन तंत्रे अंमलात आणली."
-            },
-            "2020": {
-              title: "मुक्त शौचमुक्त स्थिती",
-              description: "१००% शौचालय कव्हरेजसह ODF स्थिती यशस्वीरित्या प्राप्त आणि टिकवली."
-            },
-            "2018": {
-              title: "सौरऊर्जा अवलंब",
-              description: "रस्त्यावरील दिवे आणि सार्वजनिक सुविधांसाठी सौरऊर्जा स्वीकारणारे जिल्ह्यातील पहिले गाव."
-            }
-          }
-        }
+  hero: {
+    title: "जानोरी गावाबद्दल",
+    subtitle: "आमच्या प्रिय गावाचा समृद्ध वारसा, संस्कृती आणि प्रगती शोधा"
+  },
+  history: {
+    title: "गावाचा इतिहास",
+    p1: "विदर्भातील एक पवित्र आणि ऐतिहासिक धार्मिक स्थळ. जानोरी हे महाराष्ट्रातील बुलढाणा जिल्ह्यातील एक गाव आहे, जे शेगावपासून सुमारे ८ ते १० किलोमीटर अंतरावर आहे. हे गाव त्याच्या प्राचीन मंदिरांसाठी, पारंपारिक स्थापत्यशैलीसाठी, धार्मिक रीतीरिवाजांसाठी आणि आध्यात्मिक दृष्ट्या समृद्ध वातावरणासाठी विदर्भभर प्रसिद्ध आहे.",
+    p2: "१. ऐतिहासिक पार्श्वभूमी: जानोरीची मंदिरे १७व्या शतकात बांधली गेली. तेव्हापासून, या गावाने एक महत्त्वाचे धार्मिक तीर्थक्षेत्राचा दर्जा प्राप्त केला आहे. प्राचीन काळापासून, संत, ऋषी आणि तपस्वी या गावात राहत आले आहेत. गावातील काही मंदिरे पेशवे काळातील स्थापत्यशैली दर्शवितात.",
+    p3: "२. प्रमुख धार्मिक स्थळे: भगवान नरसिंह मंदिर: हे गावातील सर्वात प्रमुख धार्मिक केंद्र आहे. मंदिराचा शिखर, गर्भगृह आणि मंडप उत्कृष्ट दगडी शिल्पकलेचे प्रदर्शन करतात. मंदिर परिसरात ध्यान आणि धार्मिक प्रवचनांसाठी समर्पित जागा आहेत. नरसिंह जयंती मोठ्या भक्तिभावाने साजरी केली जाते, ज्या दरम्यान हजारो भाविक दर्शनासाठी येतात. महादेव मंदिर: गावाच्या मध्यभागी स्थित, हे मंदिर महाशिवरात्रीच्या निमित्ताने रात्रभर भव्य पूजा आणि जागरण आयोजित करते. महासिद्ध भगवान मंदिर: या मंदिराचा गुप्त साधना आणि तांत्रिक पूजेचा इतिहास आहे. भक्त चांगल्या आरोग्यासाठी आणि मनोकामना पूर्ण होण्यासाठी येथे येतात. भगवान राम, लक्ष्मण, सीता आणि हनुमान मंदिरे: राम नवमी आणि हनुमान जयंती सारखे सण येथे मोठ्या उत्साहात साजरे केले जातात.",
+    p4: "३. पर्यटक आणि भाविकांसाठी माहिती: गाव शेगाव बस स्टँड आणि रेल्वे स्थानकापासून सहज उपलब्ध आहे. गावात तीर्थयात्री निवास, भोजन व्यवस्था, पिण्याचे पाणी आणि स्वच्छ स्वच्छता सुविधा उपलब्ध आहेत. अभ्यागत आणि भाविकांसाठी स्थानिक मार्गदर्शकही उपलब्ध आहेत. जवळचे निसर्गरम्य दृश्ये, हिरवीगार शेते आणि शांत वातावरण पर्यटकांना अधिक आकर्षित करते."
+  },
+  demographics: {
+    title: "गावाची लोकसंख्या",
+    subtitle: "लोक आणि जमिनीबद्दल महत्त्वाची माहिती",
+    population: {
+      title: "लोकसंख्या",
+      total: "अंदाजे ५,००० रहिवासी",
+      male: "२,६०० पुरुष",
+      female: "२,४०० महिला",
+      children: "१,२०० मुले",
+      youth: "१,५०० युवक",
+      adults: "२,००० प्रौढ",
+      seniors: "३०० ज्येष्ठ नागरिक"
+    },
+    education: {
+      title: "शिक्षण",
+      rate: "साक्षरता दर: ८५%",
+      primary: "प्राथमिक शाळा: ५०० विद्यार्थी",
+      secondary: "माध्यमिक शाळा: ३०० विद्यार्थी",
+      graduates: "१५० पदवीधर",
+      higher: "५० उच्च शिक्षण घेतलेले विद्यार्थी",
+      technical: "३० तांत्रिक शिक्षण घेत आहेत"
+    },
+    geography: {
+      title: "भूगोल",
+      area: "एकूण क्षेत्रफळ: १० चौ. किमी",
+      agricultural: "७ चौ. किमी शेतीयोग्य जमीन",
+      residential: "२ चौ. किमी निवासी",
+      forest: "०.५ चौ. किमी जंगल",
+      water: "०.५ चौ. किमी जलस्रोत",
+      distance: "शेगावपासून १२ किमी"
+    }
+  },
+  achievements: {
+    title: "गावाची उपलब्धी",
+    subtitle: "मान्यता आणि महत्त्वाचे टप्पे ज्याचा आम्हाला अभिमान आहे",
+    items: {
+      "2023": {
+        title: "राज्यस्तरीय स्वच्छ गाव पुरस्कार",
+        description: "उत्कृष्ट कचरा व्यवस्थापन आणि स्वच्छता पद्धतींसाठी मान्यता."
       },
+      "2022": {
+        title: "१००% डिजिटल साक्षरता",
+        description: "१४-६० वयोगटातील सर्व रहिवाशांसाठी डिजिटल साक्षरता प्राप्त केली."
+      },
+      "2021": {
+        title: "जलसंधारण आदर्श गाव",
+        description: "नाविन्यपूर्ण जलसंधारण आणि संवर्धन तंत्रे अंमलात आणली."
+      },
+      "2020": {
+        title: "मुक्त शौचमुक्त स्थिती",
+        description: "१००% शौचालय कवरेजसह ODF स्थिती यशस्वीरित्या प्राप्त आणि टिकवली."
+      },
+      "2018": {
+        title: "सौरऊर्जा अवलंब",
+        description: "रस्त्यावरील दिवे आणि सार्वजनिक सुविधांसाठी सौरऊर्जा स्वीकारणारे जिल्ह्यातील पहिले गाव."
+      }
+    }
+  }
+},
       services: {
         title: "आमच्या सेवा",
         subtitle: "आमच्या रहिवाशांच्या कल्याणासाठी सर्वसमावेशक सेवा आणि योजना",
@@ -1196,6 +1344,65 @@ const resources = {
         bottom: {
           rights: "सर्व हक्क राखीव"
         }
+      },
+      gallery: {
+        title: "आमची गॅलरी",
+        subtitle: "जानोरीचे सार आणि भावना टिपताना",
+        photoGalleryTitle: "फोटो गॅलरी",
+        photoGallerySubtitle: "आमच्या गावातील जीवन आणि क्रियाकलापांचा एक दृश्य प्रवास",
+        videoGalleryTitle: "व्हिडिओ गॅलरी",
+        videoGallerySubtitle: "गावातील कार्यक्रम आणि उपलब्धी दाखवणारे व्हिडिओ पहा",
+        ctaTitle: "तुमचे गावातील क्षण शेअर करा",
+        ctaDescription: "तुमच्याकडे जानोरी गावातील कार्यक्रम किंवा सुंदर स्थळांचे फोटो किंवा व्हिडिओ आहेत का? ते आमच्यासोबत शेअर करा जेणेकरून ते आमच्या गॅलरीत समाविष्ट केले जातील.",
+        submitMedia: "मीडिया सबमिट करा",
+        uploading: "अपलोड होत आहे...",
+        uploadSuccess: "मीडिया यशस्वीरित्या अपलोड झाला!",
+        userUploadSuccess: "तुमची प्रतिमा यशस्वीरित्या अपलोड झाली आहे आणि प्रशासकाच्या मान्यतेची प्रतीक्षा करत आहे.",
+        images: {
+          "1": {
+            alt: "गावाचे लँडस्केप",
+            category: "village"
+          },
+          "2": {
+            alt: "शेती उपक्रम",
+            category: "agriculture"
+          },
+          "3": {
+            alt: "स्थानिक सण उत्सव",
+            category: "culture"
+          },
+          "4": {
+            alt: "सामुदायिक आरोग्य शिबिर",
+            category: "health"
+          },
+          "5": {
+            alt: "कृषी प्रशिक्षण",
+            category: "agriculture"
+          },
+          "6": {
+            alt: "गाव विकास",
+            category: "development"
+          },
+          "7": {
+            alt: "शिक्षण",
+            category: "education"
+          },
+          "8": {
+            alt: "पायाभूत सुविधा",
+            category: "infrastructure"
+          }
+        },
+        videos: {
+          "1": {
+            title: "ग्राम विकास प्रकल्प"
+          },
+          "2": {
+            title: "प्रजासत्ताक दिन समारंभ २०२५"
+          },
+          "3": {
+            title: "ग्रामसभा बैठकीचे ठळक मुद्दे"
+          }
+        }
       }
     }
   }
@@ -1203,8 +1410,8 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'en',
-  fallbackLng: 'en',
+  lng: 'mr',          // 👈 default language changed to Marathi
+  fallbackLng: 'mr',  // 👈 fallback also Marathi
   interpolation: { escapeValue: false }
 });
 
