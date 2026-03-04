@@ -138,7 +138,69 @@ const resources = {
         description: "First village in the district to adopt solar energy for street lighting and public facilities."
       }
     }
+  },
+  "groups": {
+  "title": "Community Groups & Mandals",
+  "subtitle": "Discover the vibrant cultural and religious organizations that enrich our village community",
+  "established": "Est. {{year}}",
+  "keyActivities": "Key Activities:",
+  "mandals": {
+    "jayGajanan": {
+      "name": "Jay Gajanan Ganeshotsav Mandal",
+      "description": "One of the oldest and most revered Ganeshotsav mandals in the village, known for its grand celebrations and community service.",
+      "activities": {
+        "ganeshChaturthi": "Ganesh Chaturthi",
+        "culturalPrograms": "Cultural Programs",
+        "communityFeast": "Community Feast"
+      }
+    },
+    "sadbhavna": {
+      "name": "Sadbhavna Ganeshotsav Mandal",
+      "description": "Promotes harmony and brotherhood through various social initiatives and cultural events during festivals.",
+      "activities": {
+        "religiousCeremonies": "Religious Ceremonies",
+        "socialAwareness": "Social Awareness",
+        "youthEngagement": "Youth Engagement"
+      }
+    },
+    "shivyug": {
+      "name": "Shivyug Ganeshotsav Mandal",
+      "description": "Dedicated to preserving traditional rituals while incorporating modern elements in celebrations.",
+      "activities": {
+        "traditionalPuja": "Traditional Puja",
+        "artCompetitions": "Art Competitions",
+        "culturalShows": "Cultural Shows"
+      }
+    },
+    "mauli": {
+      "name": "Mauli Ganeshotsav Mandal",
+      "description": "Focuses on involving women and children in festive celebrations and community activities.",
+      "activities": {
+        "womenEmpowerment": "Women Empowerment",
+        "childrenPrograms": "Children Programs",
+        "healthCamps": "Health Camps"
+      }
+    },
+    "shivShakti": {
+      "name": "Shiv Shakti Durga Utsav Mandal",
+      "description": "Celebrates Navratri and Durga Puja with great enthusiasm, organizing various cultural events.",
+      "activities": {
+        "navratriCelebration": "Navratri Celebration",
+        "garbaNights": "Garba Nights",
+        "religiousDiscourses": "Religious Discourses"
+      }
+    },
+    "bhajani": {
+      "name": "Bhajani Mandal",
+      "description": "Dedicated to preserving and promoting devotional music and bhajans throughout the year.",
+      "activities": {
+        "dailyBhajans": "Daily Bhajans",
+        "religiousFestivals": "Religious Festivals",
+        "spiritualGatherings": "Spiritual Gatherings"
+      }
+    }
   }
+}
 },
       services: {
         title: "Our Services",
@@ -608,7 +670,69 @@ const resources = {
         description: "सड़क प्रकाश व्यवस्था और सार्वजनिक सुविधाओं के लिए सौर ऊर्जा अपनाने वाला जिले का पहला गाँव।"
       }
     }
+  },
+ "groups": {
+  "title": "सामुदायिक समूह और मंडल",
+  "subtitle": "हमारे ग्राम समुदाय को समृद्ध करने वाले जीवंत सांस्कृतिक और धार्मिक संगठनों की खोज करें",
+  "established": "स्थापित {{year}}",
+  "keyActivities": "मुख्य गतिविधियाँ:",
+  "mandals": {
+    "jayGajanan": {
+      "name": "जय गजानन गणेशोत्सव मंडल",
+      "description": "गाँव के सबसे पुराने और सबसे प्रतिष्ठित गणेशोत्सव मंडलों में से एक, जो अपने भव्य उत्सवों और सामुदायिक सेवा के लिए जाना जाता है।",
+      "activities": {
+        "ganeshChaturthi": "गणेश चतुर्थी",
+        "culturalPrograms": "सांस्कृतिक कार्यक्रम",
+        "communityFeast": "सामुदायिक भोज"
+      }
+    },
+    "sadbhavna": {
+      "name": "सद्भावना गणेशोत्सव मंडल",
+      "description": "त्योहारों के दौरान विभिन्न सामाजिक पहलों और सांस्कृतिक कार्यक्रमों के माध्यम से सद्भाव और भाईचारे को बढ़ावा देता है।",
+      "activities": {
+        "religiousCeremonies": "धार्मिक समारोह",
+        "socialAwareness": "सामाजिक जागरूकता",
+        "youthEngagement": "युवा सहभागिता"
+      }
+    },
+    "shivyug": {
+      "name": "शिवयुग गणेशोत्सव मंडल",
+      "description": "उत्सवों में आधुनिक तत्वों को शामिल करते हुए पारंपरिक अनुष्ठानों के संरक्षण के लिए समर्पित।",
+      "activities": {
+        "traditionalPuja": "पारंपरिक पूजा",
+        "artCompetitions": "कला प्रतियोगिताएं",
+        "culturalShows": "सांस्कृतिक कार्यक्रम"
+      }
+    },
+    "mauli": {
+      "name": "माऊली गणेशोत्सव मंडल",
+      "description": "त्योहारी उत्सवों और सामुदायिक गतिविधियों में महिलाओं और बच्चों को शामिल करने पर केंद्रित है।",
+      "activities": {
+        "womenEmpowerment": "महिला सशक्तिकरण",
+        "childrenPrograms": "बाल कार्यक्रम",
+        "healthCamps": "स्वास्थ्य शिविर"
+      }
+    },
+    "shivShakti": {
+      "name": "शिव शक्ति दुर्गा उत्सव मंडल",
+      "description": "विभिन्न सांस्कृतिक कार्यक्रमों का आयोजन करते हुए नवरात्रि और दुर्गा पूजा को बड़े उत्साह के साथ मनाता है।",
+      "activities": {
+        "navratriCelebration": "नवरात्रि उत्सव",
+        "garbaNights": "गरबा रातें",
+        "religiousDiscourses": "धार्मिक प्रवचन"
+      }
+    },
+    "bhajani": {
+      "name": "भजनी मंडल",
+      "description": "पूरे वर्ष भक्ति संगीत और भजनों के संरक्षण और प्रचार के लिए समर्पित।",
+      "activities": {
+        "dailyBhajans": "दैनिक भजन",
+        "religiousFestivals": "धार्मिक त्योहार",
+        "spiritualGatherings": "आध्यात्मिक सभाएं"
+      }
+    }
   }
+}
 },
       services: {
         title: "हमारी सेवाएं",
@@ -625,7 +749,7 @@ const resources = {
         },
         schemes: {
           title: "योजना पंजीकरण",
-          description: "जानोरी के पात्र निवासियों के लिए विभिन्न सरकारी कल्याण योजनाओं, सब्सिडी और लाभों के लिए आवेदन में सहायता।"
+          description: "जानोरी के पात्र निवासियों के लिए विविध सरकारी कल्याण योजनाओं, सब्सिडी और लाभों के लिए आवेदन में सहायता।"
         },
         dispute: {
           title: "विवाद समाधान",
@@ -1078,7 +1202,69 @@ const resources = {
         description: "रस्त्यावरील दिवे आणि सार्वजनिक सुविधांसाठी सौरऊर्जा स्वीकारणारे जिल्ह्यातील पहिले गाव."
       }
     }
+  },
+ "groups": {
+  "title": "सामुदायिक गट आणि मंडळे",
+  "subtitle": "आमच्या गावातील समृद्ध सांस्कृतिक आणि धार्मिक संघटना शोधा ज्या आमच्या ग्रामसमुदायाला समृद्ध करतात",
+  "established": "स्थापना {{year}}",
+  "keyActivities": "मुख्य उपक्रम:",
+  "mandals": {
+    "jayGajanan": {
+      "name": "जय गजानन गणेशोत्सव मंडळ",
+      "description": "गावातील सर्वात जुने आणि आदरणीय गणेशोत्सव मंडळांपैकी एक, जे त्याच्या भव्य उत्सव आणि सामुदायिक सेवेसाठी ओळखले जाते.",
+      "activities": {
+        "ganeshChaturthi": "गणेश चतुर्थी",
+        "culturalPrograms": "सांस्कृतिक कार्यक्रम",
+        "communityFeast": "सामुदायिक भोजन"
+      }
+    },
+    "sadbhavna": {
+      "name": "सद्भावना गणेशोत्सव मंडळ",
+      "description": "सणांदरम्यान विविध सामाजिक उपक्रम आणि सांस्कृतिक कार्यक्रमांद्वारे सलोखा आणि बंधुभाव वाढवते.",
+      "activities": {
+        "religiousCeremonies": "धार्मिक समारंभ",
+        "socialAwareness": "सामाजिक जनजागृती",
+        "youthEngagement": "युवा सहभाग"
+      }
+    },
+    "shivyug": {
+      "name": "शिवयुग गणेशोत्सव मंडळ",
+      "description": "उत्सवांमध्ये आधुनिक घटकांचा समावेश करताना पारंपारिक विधी जतन करण्यासाठी समर्पित.",
+      "activities": {
+        "traditionalPuja": "पारंपारिक पूजा",
+        "artCompetitions": "कला स्पर्धा",
+        "culturalShows": "सांस्कृतिक कार्यक्रम"
+      }
+    },
+    "mauli": {
+      "name": "माऊली गणेशोत्सव मंडळ",
+      "description": "सणासुदीच्या उत्सवांमध्ये आणि सामुदायिक उपक्रमांमध्ये महिला आणि मुलांचा सहभाग वाढवण्यावर लक्ष केंद्रित करते.",
+      "activities": {
+        "womenEmpowerment": "महिला सक्षमीकरण",
+        "childrenPrograms": "बाल कार्यक्रम",
+        "healthCamps": "आरोग्य शिबिरे"
+      }
+    },
+    "shivShakti": {
+      "name": "शिव शक्ती दुर्गा उत्सव मंडळ",
+      "description": "विविध सांस्कृतिक कार्यक्रमांचे आयोजन करून नवरात्री आणि दुर्गा पूजा मोठ्या उत्साहात साजरी करते.",
+      "activities": {
+        "navratriCelebration": "नवरात्री उत्सव",
+        "garbaNights": "गरबा रात्री",
+        "religiousDiscourses": "धार्मिक प्रवचने"
+      }
+    },
+    "bhajani": {
+      "name": "भजनी मंडळ",
+      "description": "वर्षभर भक्ती संगीत आणि भजनांचे जतन आणि प्रचार करण्यासाठी समर्पित.",
+      "activities": {
+        "dailyBhajans": "दैनिक भजने",
+        "religiousFestivals": "धार्मिक सण",
+        "spiritualGatherings": "आध्यात्मिक सभा"
+      }
+    }
   }
+}
 },
       services: {
         title: "आमच्या सेवा",

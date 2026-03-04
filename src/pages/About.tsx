@@ -36,46 +36,76 @@ const About = () => {
 
   const groups = [
     {
-      name: 'Jay Gajanan Ganeshotsav Mandal',
-      description: 'One of the oldest and most revered Ganeshotsav mandals in the village, known for its grand celebrations and community service.',
+      id: 'jayGajanan',
+      name: t('about.groups.mandals.jayGajanan.name'),
+      description: t('about.groups.mandals.jayGajanan.description'),
       established: '1995',
       image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
-      activities: ['Ganesh Chaturthi', 'Cultural Programs', 'Community Feast']
+      activities: [
+        t('about.groups.mandals.jayGajanan.activities.ganeshChaturthi'),
+        t('about.groups.mandals.jayGajanan.activities.culturalPrograms'),
+        t('about.groups.mandals.jayGajanan.activities.communityFeast')
+      ]
     },
     {
-      name: 'Sadbhavna Ganeshotsav Mandal',
-      description: 'Promotes harmony and brotherhood through various social initiatives and cultural events during festivals.',
+      id: 'sadbhavna',
+      name: t('about.groups.mandals.sadbhavna.name'),
+      description: t('about.groups.mandals.sadbhavna.description'),
       established: '2002',
       image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
-      activities: ['Religious Ceremonies', 'Social Awareness', 'Youth Engagement']
+      activities: [
+        t('about.groups.mandals.sadbhavna.activities.religiousCeremonies'),
+        t('about.groups.mandals.sadbhavna.activities.socialAwareness'),
+        t('about.groups.mandals.sadbhavna.activities.youthEngagement')
+      ]
     },
     {
-      name: 'Shivyug Ganeshotsav Mandal',
-      description: 'Dedicated to preserving traditional rituals while incorporating modern elements in celebrations.',
+      id: 'shivyug',
+      name: t('about.groups.mandals.shivyug.name'),
+      description: t('about.groups.mandals.shivyug.description'),
       established: '2008',
       image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
-      activities: ['Traditional Puja', 'Art Competitions', 'Cultural Shows']
+      activities: [
+        t('about.groups.mandals.shivyug.activities.traditionalPuja'),
+        t('about.groups.mandals.shivyug.activities.artCompetitions'),
+        t('about.groups.mandals.shivyug.activities.culturalShows')
+      ]
     },
     {
-      name: 'Mauli Ganeshotsav Mandal',
-      description: 'Focuses on involving women and children in festive celebrations and community activities.',
+      id: 'mauli',
+      name: t('about.groups.mandals.mauli.name'),
+      description: t('about.groups.mandals.mauli.description'),
       established: '2010',
       image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
-      activities: ['Women Empowerment', 'Children Programs', 'Health Camps']
+      activities: [
+        t('about.groups.mandals.mauli.activities.womenEmpowerment'),
+        t('about.groups.mandals.mauli.activities.childrenPrograms'),
+        t('about.groups.mandals.mauli.activities.healthCamps')
+      ]
     },
     {
-      name: 'Shiv Shakti Durga Utsav Mandal',
-      description: 'Celebrates Navratri and Durga Puja with great enthusiasm, organizing various cultural events.',
+      id: 'shivShakti',
+      name: t('about.groups.mandals.shivShakti.name'),
+      description: t('about.groups.mandals.shivShakti.description'),
       established: '2012',
       image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
-      activities: ['Navratri Celebration', 'Garba Nights', 'Religious Discourses']
+      activities: [
+        t('about.groups.mandals.shivShakti.activities.navratriCelebration'),
+        t('about.groups.mandals.shivShakti.activities.garbaNights'),
+        t('about.groups.mandals.shivShakti.activities.religiousDiscourses')
+      ]
     },
     {
-      name: 'Bhajani Mandal',
-      description: 'Dedicated to preserving and promoting devotional music and bhajans throughout the year.',
+      id: 'bhajani',
+      name: t('about.groups.mandals.bhajani.name'),
+      description: t('about.groups.mandals.bhajani.description'),
       established: '1985',
       image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
-      activities: ['Daily Bhajans', 'Religious Festivals', 'Spiritual Gatherings']
+      activities: [
+        t('about.groups.mandals.bhajani.activities.dailyBhajans'),
+        t('about.groups.mandals.bhajani.activities.religiousFestivals'),
+        t('about.groups.mandals.bhajani.activities.spiritualGatherings')
+      ]
     }
   ];
 
@@ -193,8 +223,8 @@ const About = () => {
       <section className="groups-section">
         <div className="container">
           <div className="section-header">
-            <h2>Community Groups & Mandals</h2>
-            <p>Discover the vibrant cultural and religious organizations that enrich our village community</p>
+            <h2>{t('about.groups.title')}</h2>
+            <p>{t('about.groups.subtitle')}</p>
           </div>
           
           <div className="groups-grid">
@@ -205,10 +235,10 @@ const About = () => {
                 </div>
                 <div className="group-content">
                   <h3>{group.name}</h3>
-                  <p className="group-established">Est. {group.established}</p>
+                  <p className="group-established">{t('about.groups.established', { year: group.established })}</p>
                   <p className="group-description">{group.description}</p>
                   <div className="group-activities">
-                    <h4>Key Activities:</h4>
+                    <h4>{t('about.groups.keyActivities')}</h4>
                     <ul>
                       {group.activities.map((activity, idx) => (
                         <li key={idx}>{activity}</li>
