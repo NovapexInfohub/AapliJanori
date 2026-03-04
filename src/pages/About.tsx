@@ -34,6 +34,51 @@ const About = () => {
     },
   ];
 
+  const groups = [
+    {
+      name: 'Jay Gajanan Ganeshotsav Mandal',
+      description: 'One of the oldest and most revered Ganeshotsav mandals in the village, known for its grand celebrations and community service.',
+      established: '1995',
+      image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
+      activities: ['Ganesh Chaturthi', 'Cultural Programs', 'Community Feast']
+    },
+    {
+      name: 'Sadbhavna Ganeshotsav Mandal',
+      description: 'Promotes harmony and brotherhood through various social initiatives and cultural events during festivals.',
+      established: '2002',
+      image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
+      activities: ['Religious Ceremonies', 'Social Awareness', 'Youth Engagement']
+    },
+    {
+      name: 'Shivyug Ganeshotsav Mandal',
+      description: 'Dedicated to preserving traditional rituals while incorporating modern elements in celebrations.',
+      established: '2008',
+      image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
+      activities: ['Traditional Puja', 'Art Competitions', 'Cultural Shows']
+    },
+    {
+      name: 'Mauli Ganeshotsav Mandal',
+      description: 'Focuses on involving women and children in festive celebrations and community activities.',
+      established: '2010',
+      image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
+      activities: ['Women Empowerment', 'Children Programs', 'Health Camps']
+    },
+    {
+      name: 'Shiv Shakti Durga Utsav Mandal',
+      description: 'Celebrates Navratri and Durga Puja with great enthusiasm, organizing various cultural events.',
+      established: '2012',
+      image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
+      activities: ['Navratri Celebration', 'Garba Nights', 'Religious Discourses']
+    },
+    {
+      name: 'Bhajani Mandal',
+      description: 'Dedicated to preserving and promoting devotional music and bhajans throughout the year.',
+      established: '1985',
+      image: 'https://img.freepik.com/premium-photo/isolated-traditional-indian-dhol-drum-with-vibrant-decorations_995162-32151.jpg',
+      activities: ['Daily Bhajans', 'Religious Festivals', 'Spiritual Gatherings']
+    }
+  ];
+
   return (
     <div className="about-page">
       <HeroSection 
@@ -50,10 +95,10 @@ const About = () => {
                 src="https://i.ytimg.com/vi/s2OJzfFIQ10/maxresdefault.jpg" 
                 alt={t('about.history.title')} 
               />
-              <br></br>
+              <br />
               <img 
-               src="https://www.memeraki.com/cdn/shop/articles/Screenshot_2023-02-01_at_3.27.33_AM_1200x1200.png?v=1675202595"
-              alt={t('about.history.title')} 
+                src="https://www.memeraki.com/cdn/shop/articles/Screenshot_2023-02-01_at_3.27.33_AM_1200x1200.png?v=1675202595"
+                alt={t('about.history.title')} 
               />
             </div>
             <div className="village-text">
@@ -138,6 +183,38 @@ const About = () => {
                   <h3>{achievement.year}</h3>
                   <h4>{achievement.title}</h4>
                   <p>{achievement.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="groups-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Community Groups & Mandals</h2>
+            <p>Discover the vibrant cultural and religious organizations that enrich our village community</p>
+          </div>
+          
+          <div className="groups-grid">
+            {groups.map((group, index) => (
+              <div key={index} className="group-card">
+                <div className="group-image">
+                  <img src={group.image} alt={group.name} />
+                </div>
+                <div className="group-content">
+                  <h3>{group.name}</h3>
+                  <p className="group-established">Est. {group.established}</p>
+                  <p className="group-description">{group.description}</p>
+                  <div className="group-activities">
+                    <h4>Key Activities:</h4>
+                    <ul>
+                      {group.activities.map((activity, idx) => (
+                        <li key={idx}>{activity}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
