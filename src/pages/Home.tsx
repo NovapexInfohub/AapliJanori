@@ -145,9 +145,9 @@ const Home = () => {
   // Load Elfsight script dynamically
   useEffect(() => {
     // Check if script already exists
-    if (!document.querySelector('script[src="https://static.elfsight.com/platform/platform.js"]')) {
+    if (!document.querySelector('script[src="https://elfsightcdn.com/platform.js"]')) {
       const script = document.createElement('script');
-      script.src = 'https://static.elfsight.com/platform/platform.js';
+      script.src = 'https://elfsightcdn.com/platform.js';
       script.async = true;
       document.body.appendChild(script);
     }
@@ -472,9 +472,9 @@ const Home = () => {
             <p>{t('home.instagramSubtitle') || '@janori_grampanchayat'}</p>
           </div>
           
-          {/* Elfsight Instagram Feed */}
+              {/* Elfsight Instagram Feed | Untitled Instagram Feed */}
           <div 
-            className="elfsight-app-a874f6ef-0f60-4bd4-b1b9-6caebe1c31a1" 
+            className="elfsight-app-1c58a8fd-5099-4e6d-ab24-ce735ec29785" 
             data-elfsight-app-lazy
           ></div>
         </div>
