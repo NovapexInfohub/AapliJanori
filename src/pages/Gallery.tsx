@@ -2,6 +2,15 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import HeroSection from '../components/HeroSection';
 import '../styles/Gallery.css';
+import templeImg1 from '../assets/temple img/img1.jpeg';
+import templeImg2 from '../assets/temple img/img2.jpeg';
+import templeImg3 from '../assets/temple img/img3.jpeg';
+import templeImg4 from '../assets/temple img/img4.jpeg';
+import templeImg5 from '../assets/temple img/img5.jpeg';
+import templeImg6 from '../assets/temple img/img6.jpeg';
+import templeImg7 from '../assets/temple img/img7.jpeg';
+import templeImg8 from '../assets/temple img/img8.jpeg';
+import templeImg9 from '../assets/temple img/img9.jpeg';
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -116,6 +125,11 @@ const Gallery = () => {
     ...userImages.filter((img) => img.status === 'approved'),
   ];
 
+  const templeImages = [
+    templeImg1, templeImg2, templeImg3, templeImg4, templeImg5,
+    templeImg6, templeImg7, templeImg8, templeImg9
+  ];
+
   const handleMediaUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
@@ -172,6 +186,23 @@ const Gallery = () => {
         subtitle={t('gallery.subtitle')}
         backgroundImage="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=compress&fit=crop&w=1200&q=80"
       />
+
+      <section className="temples-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Janori Temples</h2>
+            <p>Glimpses of sacred places in our village</p>
+          </div>
+          <div className="temples-grid">
+            {templeImages.map((src, idx) => (
+              <div key={idx} className="temple-item">
+                <img src={src} alt={`Janori Temple ${idx + 1}`} className="temple-image" />
+                <div className="temple-caption">Janori Temple</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="photo-gallery-section">
         <div className="container">

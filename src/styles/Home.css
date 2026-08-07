@@ -217,16 +217,6 @@
   transform: scale(1.15);
 }
 
-.member-avatar-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gray-500);
-  background-color: var(--gray-100);
-}
-
 .emergency-services {
   padding: 60px 0;
   background-color: var(--white);
@@ -317,87 +307,6 @@
 .cta-content .btn-primary:hover {
   background-color: var(--accent-color);
   color: var(--white);
-}
-
-.travel-time-section {
-  padding: 60px 0;
-  background-color: var(--white);
-}
-
-.travel-time-layout {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  align-items: flex-start;
-  margin-top: 24px;
-}
-
-.travel-time-filters {
-  flex: 1 1 260px;
-  max-width: 360px;
-  background: var(--gray-100);
-  border-radius: 12px;
-  padding: 20px 24px;
-  box-shadow: var(--box-shadow);
-}
-
-.travel-time-filters .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 16px;
-}
-
-.travel-time-filters label {
-  font-weight: 500;
-  color: var(--gray-800);
-}
-
-.travel-time-filters select {
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--gray-300);
-  font-family: var(--font-family);
-  font-size: 0.95rem;
-  background-color: var(--white);
-  transition: var(--transition);
-}
-
-.travel-time-filters select:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(255, 119, 34, 0.25);
-}
-
-.travel-time-card {
-  flex: 2 1 320px;
-  background: var(--white);
-  border-radius: 12px;
-  padding: 24px 28px;
-  box-shadow: var(--box-shadow);
-  border-left: 4px solid var(--primary-color);
-}
-
-.travel-time-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  color: var(--accent-color);
-}
-
-.travel-time-meta {
-  margin-bottom: 6px;
-  color: var(--gray-700);
-}
-
-.travel-time-meta span {
-  font-weight: 600;
-  margin-right: 6px;
-}
-
-.travel-time-description {
-  margin-top: 12px;
-  color: var(--gray-700);
-  line-height: 1.6;
 }
 
 .important-notice-3d {
@@ -600,39 +509,6 @@ body.dark .cta-content p {
 /* Important Notice */
 body.dark .important-notice-3d {
   background: linear-gradient(90deg, #333 0%, #222 100%);
-}
-
-body.dark .travel-time-section {
-  background-color: #1e1e1e;
-}
-
-body.dark .travel-time-filters {
-  background-color: #222;
-  box-shadow: none;
-}
-
-body.dark .travel-time-filters label {
-  color: #f1f1f1;
-}
-
-body.dark .travel-time-filters select {
-  background-color: #111;
-  color: #f1f1f1;
-  border-color: #333;
-}
-
-body.dark .travel-time-card {
-  background-color: #222;
-  color: #f1f1f1;
-  box-shadow: none;
-}
-
-body.dark .travel-time-meta {
-  color: #dddddd;
-}
-
-body.dark .travel-time-description {
-  color: #cccccc;
 }
 
 /* Hero section text already white so no change needed */

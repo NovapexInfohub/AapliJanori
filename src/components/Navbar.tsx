@@ -29,6 +29,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, theme }) => {
   const closeMenu = () => setIsMenuOpen(false);
   const isActive = (path: string) => (location.pathname === path ? 'active' : '');
 
+  const panchayatText = location.pathname === '/' ? 'माझ गाव माझा अभिमान' : t('nav.panchayatText', 'Aapli janori');
+
   // Select logo based on current theme
   const logoSrc = theme === 'light' ? logoLight : logoDark;
 
@@ -40,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, theme }) => {
             <img src={logoSrc} alt="Logo" className="logo-img" />
             <div className="logo-text-wrapper">
               <span className="village-name">{t('nav.brandTitle')}</span>
-              <span className="panchayat-text">{t('nav.panchayatText', 'Gram Panchayat')}</span>
+              <span className="panchayat-text">{panchayatText}</span>
             </div>
           </Link>
 
@@ -83,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, theme }) => {
         </div>
       </nav>
       {/* Background overlay for mobile menu */}
-      {isMenuOpen && <div className="className" onClick={closeMenu}></div>}
+      {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
     </>
   );
 };

@@ -50,7 +50,7 @@ const defaultTownServices: TownService[] = [
     profession: 'Welder',
     name: 'Ramesh Patil',
     contact: '9876543210',
-    address: 'Main Road, Near Gram Panchayat',
+   address: 'Main Road, Near आपली जानोरी',
     shop: 'Ramesh Welding Works',
     description: 'All types of welding and fabrication work available.'
   },
